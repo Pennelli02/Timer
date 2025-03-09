@@ -1,0 +1,5 @@
+C:/Users/Asus/CLionProjects/Timer/cmake-build-debug/CMakeFiles/Timer.dir
+C:/Users/Asus/CLionProjects/Timer/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Asus/CLionProjects/Timer/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Asus/CLionProjects/Timer/cmake-build-debug/CMakeFiles/Timer_autogen_timestamp_deps.dir
+C:/Users/Asus/CLionProjects/Timer/cmake-build-debug/CMakeFiles/Timer_autogen.dir

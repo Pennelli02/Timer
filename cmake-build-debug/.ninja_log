@@ -1,0 +1,26 @@
+# ninja log v5
+10	308	7632580571101164	C:/Users/Asus/CLionProjects/Timer/cmake-build-debug/Timer_autogen/mocs_compilation.cpp	a074facfc3d6ac71
+10	308	7632580571101164	Timer_autogen/timestamp	a074facfc3d6ac71
+10	308	7632580571101164	Timer_autogen/mocs_compilation.cpp	a074facfc3d6ac71
+1083	3748	7632528120952733	CMakeFiles/Timer.dir/Timer_autogen/mocs_compilation.cpp.obj	5bb5964bf493f981
+10	308	7632580571101164	C:/Users/Asus/CLionProjects/Timer/cmake-build-debug/Timer_autogen/timestamp	a074facfc3d6ac71
+1096	3762	7632528121085194	CMakeFiles/Timer.dir/main.cpp.obj	ee0008582eba1177
+319	3521	7632580603197680	CMakeFiles/Timer.dir/mainwindow.cpp.obj	7ae9614bd0779a77
+3522	6291	7632580612082616	Timer.exe	ffb1cf4f3a6bb5d3
+4	715	7632591741397915	build.ninja	5ebc96ee12e07623
+12	987	7632594472622088	Timer_autogen/timestamp	a074facfc3d6ac71
+12	987	7632594472622088	Timer_autogen/mocs_compilation.cpp	a074facfc3d6ac71
+12	987	7632594472622088	C:/Users/Asus/CLionProjects/Timer/cmake-build-debug/Timer_autogen/timestamp	a074facfc3d6ac71
+12	987	7632594472622088	C:/Users/Asus/CLionProjects/Timer/cmake-build-debug/Timer_autogen/mocs_compilation.cpp	a074facfc3d6ac71
+988	3551	7632594500444322	CMakeFiles/Timer.dir/Timer_autogen/mocs_compilation.cpp.obj	5bb5964bf493f981
+1000	3619	7632594501136619	CMakeFiles/Timer.dir/main.cpp.obj	ee0008582eba1177
+994	3652	7632594501474599	CMakeFiles/Timer.dir/clockwindow.cpp.obj	f7599f1be2747939
+3653	4307	7632594505050241	Timer.exe	de64d4489685719a
+35	1210	7632608410526051	Timer_autogen/timestamp	a074facfc3d6ac71
+35	1210	7632608410526051	Timer_autogen/mocs_compilation.cpp	a074facfc3d6ac71
+35	1210	7632608410526051	C:/Users/Asus/CLionProjects/Timer/cmake-build-debug/Timer_autogen/timestamp	a074facfc3d6ac71
+35	1210	7632608410526051	C:/Users/Asus/CLionProjects/Timer/cmake-build-debug/Timer_autogen/mocs_compilation.cpp	a074facfc3d6ac71
+1211	4159	7632608442174602	CMakeFiles/Timer.dir/Timer_autogen/mocs_compilation.cpp.obj	5bb5964bf493f981
+1219	4161	7632608442194260	CMakeFiles/Timer.dir/main.cpp.obj	ee0008582eba1177
+1215	4180	7632608442418794	CMakeFiles/Timer.dir/clockwindow.cpp.obj	f7599f1be2747939
+11	808	7632608583557103	Timer.exe	de64d4489685719a
