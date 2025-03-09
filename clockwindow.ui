@@ -62,7 +62,7 @@
     <rect>
      <x>40</x>
      <y>350</y>
-     <width>201</width>
+     <width>181</width>
      <height>61</height>
     </rect>
    </property>
@@ -98,7 +98,7 @@
   <widget class="QPushButton" name="clockFormat">
    <property name="geometry">
     <rect>
-     <x>310</x>
+     <x>260</x>
      <y>350</y>
      <width>181</width>
      <height>61</height>

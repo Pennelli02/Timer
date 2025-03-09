@@ -49,7 +49,7 @@ public:
         ClockLabel->setAlignment(Qt::AlignmentFlag::AlignCenter);
         changeFormat = new QPushButton(ClockWIndow);
         changeFormat->setObjectName("changeFormat");
-        changeFormat->setGeometry(QRect(40, 350, 201, 61));
+        changeFormat->setGeometry(QRect(40, 350, 181, 61));
         QFont font2;
         font2.setPointSize(12);
         font2.setBold(true);
@@ -60,7 +60,7 @@ public:
         pushButton->setFont(font2);
         clockFormat = new QPushButton(ClockWIndow);
         clockFormat->setObjectName("clockFormat");
-        clockFormat->setGeometry(QRect(310, 350, 181, 61));
+        clockFormat->setGeometry(QRect(260, 350, 181, 61));
         clockFormat->setFont(font2);
 
         retranslateUi(ClockWIndow);
