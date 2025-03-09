@@ -60,9 +60,9 @@
   <widget class="QPushButton" name="changeFormat">
    <property name="geometry">
     <rect>
-     <x>90</x>
-     <y>340</y>
-     <width>171</width>
+     <x>40</x>
+     <y>350</y>
+     <width>201</width>
      <height>61</height>
     </rect>
    </property>
@@ -73,14 +73,14 @@
     </font>
    </property>
    <property name="text">
-    <string>Change Format</string>
+    <string>Format Date </string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>740</x>
-     <y>330</y>
+     <x>810</x>
+     <y>350</y>
      <width>201</width>
      <height>61</height>
     </rect>
@@ -93,6 +93,25 @@
    </property>
    <property name="text">
     <string>Start Timer</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="clockFormat">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>350</y>
+     <width>181</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Format Clock</string>
    </property>
   </widget>
  </widget>

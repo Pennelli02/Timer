@@ -24,6 +24,7 @@ public:
     QLabel *ClockLabel;
     QPushButton *changeFormat;
     QPushButton *pushButton;
+    QPushButton *clockFormat;
 
     void setupUi(QWidget *ClockWIndow)
     {
@@ -48,15 +49,19 @@ public:
         ClockLabel->setAlignment(Qt::AlignmentFlag::AlignCenter);
         changeFormat = new QPushButton(ClockWIndow);
         changeFormat->setObjectName("changeFormat");
-        changeFormat->setGeometry(QRect(90, 340, 171, 61));
+        changeFormat->setGeometry(QRect(40, 350, 201, 61));
         QFont font2;
         font2.setPointSize(12);
         font2.setBold(true);
         changeFormat->setFont(font2);
         pushButton = new QPushButton(ClockWIndow);
         pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(740, 330, 201, 61));
+        pushButton->setGeometry(QRect(810, 350, 201, 61));
         pushButton->setFont(font2);
+        clockFormat = new QPushButton(ClockWIndow);
+        clockFormat->setObjectName("clockFormat");
+        clockFormat->setGeometry(QRect(310, 350, 181, 61));
+        clockFormat->setFont(font2);
 
         retranslateUi(ClockWIndow);
 
@@ -68,8 +73,9 @@ public:
         ClockWIndow->setWindowTitle(QCoreApplication::translate("ClockWIndow", "ClockWIndow", nullptr));
         DateLabel->setText(QCoreApplication::translate("ClockWIndow", "Date", nullptr));
         ClockLabel->setText(QCoreApplication::translate("ClockWIndow", "Clock", nullptr));
-        changeFormat->setText(QCoreApplication::translate("ClockWIndow", "Change Format", nullptr));
+        changeFormat->setText(QCoreApplication::translate("ClockWIndow", "Format Date ", nullptr));
         pushButton->setText(QCoreApplication::translate("ClockWIndow", "Start Timer", nullptr));
+        clockFormat->setText(QCoreApplication::translate("ClockWIndow", "Format Clock", nullptr));
     } // retranslateUi
 
 };

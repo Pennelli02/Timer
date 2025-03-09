@@ -10,13 +10,14 @@
 #include <QDateTime>
 
 ClockWIndow::ClockWIndow(QWidget *parent) :
-        QWidget(parent), ui(new Ui::ClockWIndow), currentFormatIndex(0) {
+        QWidget(parent), ui(new Ui::ClockWIndow), currentDateIndex(0), currentClockIndex(0) {
     ui->setupUi(this);
     QTimer *timer = new QTimer(this);
     connect(timer, &QTimer::timeout, this, &ClockWIndow::showTime);
     timer->start(1000);  // Aggiorna ogni secondo
 
     connect(ui->changeFormat, &QPushButton::clicked, this, &ClockWIndow::changeDateFormat);
+    connect(ui->clockFormat, &QPushButton::clicked, this, &ClockWIndow::changeClockFormat);
     changeDateFormat();
 }
 
@@ -26,11 +27,34 @@ ClockWIndow::~ClockWIndow() {
 
 void ClockWIndow::showTime() {
     QTime time = QTime::currentTime();
-    QString timeText = time.toString("hh : mm : ss");
-    if((time.second()%2)==0){
-        timeText[3]=' ';
-        timeText[8]=' ';
+    QString timeText;
+    switch (currentClockIndex) {
+        case 0:
+            timeText = time.toString("hh : mm : ss");
+            if((time.second()%2)==0){
+                timeText[3]=' ';
+                timeText[8]=' ';
+            }
+            break;
+        case 1:
+            timeText=time.toString("hh-mm-ss");
+            if((time.second()%2)==0){
+                timeText[2]=' ';
+                timeText[5]=' ';
+            }
+            break;
+        case 2:
+            timeText=time.toString("hh:mm ap");
+            if((time.second()%2)==0)
+                timeText[2]=' ';
+            break;
+        case 3:
+            timeText=time.toString("HH:mm");
+            if((time.second()%2)==0)
+                timeText[2]=' ';
+            break;
     }
+
     ui->ClockLabel->setText(timeText);
 }
 
@@ -47,12 +71,16 @@ void ClockWIndow::changeDateFormat() {
     };
 
     // Seleziona il formato corrente
-    dateText = date.toString(formats[currentFormatIndex]);
+    dateText = date.toString(formats[currentDateIndex]);
 
     // Aggiorna l'etichetta con la data formattata
     ui->DateLabel->setText(dateText);
 
     // Passa al formato successivo
-    currentFormatIndex = (currentFormatIndex + 1) % formats.size();
+    currentDateIndex = (currentDateIndex + 1) % formats.size();
+}
 
+void ClockWIndow::changeClockFormat() {
+ currentClockIndex=(currentClockIndex+1)%4; // 4 formati
+ showTime();
 }

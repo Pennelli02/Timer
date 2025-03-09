@@ -22,10 +22,12 @@ public:
 private slots:
     void showTime();
     void changeDateFormat();
+    void changeClockFormat();
 
 private:
     Ui::ClockWIndow *ui;
-    int currentFormatIndex;
+    int currentDateIndex;
+    int currentClockIndex;
 };
 
 
