@@ -1,4 +1,4 @@
-C:/Users/Asus/CLionProjects/Timer/cmake-build-debug/Timer_autogen/EWIEGA46WW/moc_clockwindow.cpp: C:/Users/Asus/CLionProjects/Timer/clockwindow.h \
+C:/Users/Asus/CLionProjects/Timer/cmake-build-debug/Timer_autogen/EWIEGA46WW/moc_timerwindow.cpp: C:/Users/Asus/CLionProjects/Timer/timerwindow.h \
   C:/Users/Asus/CLionProjects/Timer/cmake-build-debug/Timer_autogen/moc_predefs.h \
   C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/limits.h \
   C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/syslimits.h \
@@ -350,5 +350,4 @@ C:/Users/Asus/CLionProjects/Timer/cmake-build-debug/Timer_autogen/EWIEGA46WW/moc
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtwidgets-config.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtwidgetsexports.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
-  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qwidget.h \
-  C:/Users/Asus/CLionProjects/Timer/timerwindow.h
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qwidget.h

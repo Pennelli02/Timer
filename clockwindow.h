@@ -6,6 +6,7 @@
 #define TIMER_CLOCKWINDOW_H
 
 #include <QWidget>
+#include "timerwindow.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -23,11 +24,13 @@ private slots:
     void showTime();
     void changeDateFormat();
     void changeClockFormat();
+    void showTimerWindow();
 
 private:
     Ui::ClockWIndow *ui;
     int currentDateIndex;
     int currentClockIndex;
+    TimerWindow *timerWindow;
 };
 
 

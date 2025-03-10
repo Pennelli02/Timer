@@ -565,6 +565,10 @@ Timer_autogen/timestamp: \
 	C:/Users/Asus/CLionProjects/Timer/cmake-build-debug/CMakeFiles/3.21.1/CMakeSystem.cmake \
 	C:/Users/Asus/CLionProjects/Timer/cmake-build-debug/Timer_autogen/moc_predefs.h \
 	C:/Users/Asus/CLionProjects/Timer/main.cpp \
+	C:/Users/Asus/CLionProjects/Timer/timerwindow.cpp \
+	C:/Users/Asus/CLionProjects/Timer/timerwindow.h \
 	C:/Users/Asus/CLionProjects/Timer/ui_ClockWIndow.h \
+	C:/Users/Asus/CLionProjects/Timer/ui_TimerWindow.h \
 	C:/Users/Asus/CLionProjects/Timer/clockwindow.ui \
+	C:/Users/Asus/CLionProjects/Timer/timerwindow.ui \
 	C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/cmake/win/bin/cmake.exe

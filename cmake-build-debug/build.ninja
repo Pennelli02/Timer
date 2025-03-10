@@ -73,6 +73,14 @@ build CMakeFiles/Timer.dir/clockwindow.cpp.obj: CXX_COMPILER__Timer_Debug C$:/Us
   OBJECT_DIR = CMakeFiles\Timer.dir
   OBJECT_FILE_DIR = CMakeFiles\Timer.dir
 
+build CMakeFiles/Timer.dir/timerwindow.cpp.obj: CXX_COMPILER__Timer_Debug C$:/Users/Asus/CLionProjects/Timer/timerwindow.cpp || cmake_object_order_depends_target_Timer
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\Timer.dir\timerwindow.cpp.obj.d
+  FLAGS = -g -std=gnu++17
+  INCLUDES = -IC:/Users/Asus/CLionProjects/Timer/cmake-build-debug/Timer_autogen/include -isystem C:/Qt/6.8.2/mingw_64/include/QtCore -isystem C:/Qt/6.8.2/mingw_64/include -isystem C:/Qt/6.8.2/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.8.2/mingw_64/include/QtWidgets -isystem C:/Qt/6.8.2/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\Timer.dir
+  OBJECT_FILE_DIR = CMakeFiles\Timer.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Timer
@@ -81,7 +89,7 @@ build CMakeFiles/Timer.dir/clockwindow.cpp.obj: CXX_COMPILER__Timer_Debug C$:/Us
 #############################################
 # Link the executable Timer.exe
 
-build Timer.exe: CXX_EXECUTABLE_LINKER__Timer_Debug CMakeFiles/Timer.dir/Timer_autogen/mocs_compilation.cpp.obj CMakeFiles/Timer.dir/main.cpp.obj CMakeFiles/Timer.dir/clockwindow.cpp.obj | C$:/Qt/6.8.2/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.8.2/mingw_64/lib/libQt6Gui.a C$:/Qt/6.8.2/mingw_64/lib/libQt6Core.a || Timer_autogen Timer_autogen_timestamp_deps
+build Timer.exe: CXX_EXECUTABLE_LINKER__Timer_Debug CMakeFiles/Timer.dir/Timer_autogen/mocs_compilation.cpp.obj CMakeFiles/Timer.dir/main.cpp.obj CMakeFiles/Timer.dir/clockwindow.cpp.obj CMakeFiles/Timer.dir/timerwindow.cpp.obj | C$:/Qt/6.8.2/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.8.2/mingw_64/lib/libQt6Gui.a C$:/Qt/6.8.2/mingw_64/lib/libQt6Core.a || Timer_autogen Timer_autogen_timestamp_deps
   FLAGS = -g
   LINK_LIBRARIES = C:/Qt/6.8.2/mingw_64/lib/libQt6Widgets.a  C:/Qt/6.8.2/mingw_64/lib/libQt6Gui.a  C:/Qt/6.8.2/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Timer.dir
@@ -124,7 +132,7 @@ build Timer_autogen_timestamp_deps: phony CMakeFiles/Timer_autogen_timestamp_dep
 #############################################
 # Utility command for Timer_autogen
 
-build Timer_autogen: phony CMakeFiles/Timer_autogen Timer_autogen/include/ui_ClockWIndow.h Timer_autogen/timestamp Timer_autogen/mocs_compilation.cpp Timer_autogen_timestamp_deps
+build Timer_autogen: phony CMakeFiles/Timer_autogen Timer_autogen/include/ui_ClockWIndow.h Timer_autogen/include/ui_TimerWindow.h Timer_autogen/timestamp Timer_autogen/mocs_compilation.cpp Timer_autogen_timestamp_deps
 
 
 #############################################
@@ -140,13 +148,13 @@ build Timer_autogen/timestamp Timer_autogen/mocs_compilation.cpp | ${cmake_ninja
 #############################################
 # Phony custom command for CMakeFiles\Timer_autogen_timestamp_deps
 
-build CMakeFiles/Timer_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/Timer_autogen_timestamp_deps: phony C$:/Qt/6.8.2/mingw_64/bin/Qt6Gui.dll C$:/Qt/6.8.2/mingw_64/bin/moc.exe C$:/Qt/6.8.2/mingw_64/bin/Qt6Core.dll C$:/Qt/6.8.2/mingw_64/bin/uic.exe C$:/Qt/6.8.2/mingw_64/bin/Qt6Widgets.dll
+build CMakeFiles/Timer_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/Timer_autogen_timestamp_deps: phony C$:/Qt/6.8.2/mingw_64/bin/Qt6Gui.dll C$:/Qt/6.8.2/mingw_64/bin/Qt6Core.dll C$:/Qt/6.8.2/mingw_64/bin/uic.exe C$:/Qt/6.8.2/mingw_64/bin/moc.exe C$:/Qt/6.8.2/mingw_64/bin/Qt6Widgets.dll
 
 
 #############################################
 # Phony custom command for CMakeFiles\Timer_autogen
 
-build CMakeFiles/Timer_autogen Timer_autogen/include/ui_ClockWIndow.h | ${cmake_ninja_workdir}CMakeFiles/Timer_autogen ${cmake_ninja_workdir}Timer_autogen/include/ui_ClockWIndow.h: phony Timer_autogen/timestamp || Timer_autogen_timestamp_deps
+build CMakeFiles/Timer_autogen Timer_autogen/include/ui_ClockWIndow.h Timer_autogen/include/ui_TimerWindow.h | ${cmake_ninja_workdir}CMakeFiles/Timer_autogen ${cmake_ninja_workdir}Timer_autogen/include/ui_ClockWIndow.h ${cmake_ninja_workdir}Timer_autogen/include/ui_TimerWindow.h: phony Timer_autogen/timestamp || Timer_autogen_timestamp_deps
 
 # =============================================================================
 # Target aliases.

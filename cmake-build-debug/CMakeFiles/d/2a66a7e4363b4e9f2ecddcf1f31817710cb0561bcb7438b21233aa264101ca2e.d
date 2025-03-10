@@ -565,6 +565,10 @@ Timer_autogen/timestamp: \
   CMakeFiles/3.21.1/CMakeSystem.cmake \
   Timer_autogen/moc_predefs.h \
   ../main.cpp \
+  ../timerwindow.cpp \
+  ../timerwindow.h \
   ../ui_ClockWIndow.h \
+  ../ui_TimerWindow.h \
   ../clockwindow.ui \
+  ../timerwindow.ui \
   C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/cmake/win/bin/cmake.exe

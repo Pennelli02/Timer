@@ -10,7 +10,7 @@
 #include <QDateTime>
 
 ClockWIndow::ClockWIndow(QWidget *parent) :
-        QWidget(parent), ui(new Ui::ClockWIndow), currentDateIndex(0), currentClockIndex(0) {
+        QWidget(parent), ui(new Ui::ClockWIndow), currentDateIndex(0), currentClockIndex(0), timerWindow(nullptr) {
     ui->setupUi(this);
     QTimer *timer = new QTimer(this);
     connect(timer, &QTimer::timeout, this, &ClockWIndow::showTime);
@@ -18,6 +18,7 @@ ClockWIndow::ClockWIndow(QWidget *parent) :
 
     connect(ui->changeFormat, &QPushButton::clicked, this, &ClockWIndow::changeDateFormat);
     connect(ui->clockFormat, &QPushButton::clicked, this, &ClockWIndow::changeClockFormat);
+    connect(ui->openTimer, &QPushButton::clicked, this, &ClockWIndow::showTimerWindow);
     changeDateFormat();
 }
 
@@ -84,3 +85,11 @@ void ClockWIndow::changeClockFormat() {
  currentClockIndex=(currentClockIndex+1)%4; // 4 formati
  showTime();
 }
+
+void ClockWIndow::showTimerWindow() {
+    if (!timerWindow) {
+        timerWindow = new TimerWindow();
+    }
+    timerWindow->show();
+}
+
