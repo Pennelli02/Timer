@@ -51,3 +51,17 @@
 1156	5255	7633474265381938	CMakeFiles/Timer.dir/clockwindow.cpp.obj	f7599f1be2747939
 1145	5523	7633474268064862	CMakeFiles/Timer.dir/timerwindow.cpp.obj	80393f87f728cd15
 5523	6258	7633474272662436	Timer.exe	eb24797feba1c426
+11	1156	7633479765760611	Timer_autogen/timestamp	a074facfc3d6ac71
+11	1156	7633479765760611	Timer_autogen/mocs_compilation.cpp	a074facfc3d6ac71
+11	1156	7633479765760611	C:/Users/Asus/CLionProjects/Timer/cmake-build-debug/Timer_autogen/timestamp	a074facfc3d6ac71
+11	1156	7633479765760611	C:/Users/Asus/CLionProjects/Timer/cmake-build-debug/Timer_autogen/mocs_compilation.cpp	a074facfc3d6ac71
+1156	7746	7633479833910654	CMakeFiles/Timer.dir/main.cpp.obj	ee0008582eba1177
+1163	7770	7633479834156399	CMakeFiles/Timer.dir/Timer_autogen/mocs_compilation.cpp.obj	5bb5964bf493f981
+1175	7812	7633479834573106	CMakeFiles/Timer.dir/clockwindow.cpp.obj	f7599f1be2747939
+1170	7864	7633479835065480	CMakeFiles/Timer.dir/timerwindow.cpp.obj	80393f87f728cd15
+11	623	7633480052500548	Timer_autogen/timestamp	a074facfc3d6ac71
+11	623	7633480052500548	Timer_autogen/mocs_compilation.cpp	a074facfc3d6ac71
+11	623	7633480052500548	C:/Users/Asus/CLionProjects/Timer/cmake-build-debug/Timer_autogen/timestamp	a074facfc3d6ac71
+11	623	7633480052500548	C:/Users/Asus/CLionProjects/Timer/cmake-build-debug/Timer_autogen/mocs_compilation.cpp	a074facfc3d6ac71
+636	2684	7633480073123889	CMakeFiles/Timer.dir/timeritem.cpp.obj	9f20d0f6f575d53d
+2684	3285	7633480076699296	Timer.exe	eb24797feba1c426

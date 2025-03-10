@@ -30,12 +30,15 @@ private slots:
     void startTimer();
     void pauseTimer();
     void updateDisplay();
+    void handleTimerFinished();
+    void removeTimer();
     void on_startPauseButton_clicked();
     void on_deleteTimer_clicked();
 
 private:
     Ui::TimerItem *ui;
     QTimer *timer;
+    QTimer *deleteTimer;
     int remainingSeconds;
     bool isRunning;
 };

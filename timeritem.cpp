@@ -15,7 +15,9 @@ TimerItem::TimerItem(QWidget *parent) :
 
     ui->setupUi(this);
     timer = new QTimer(this);
+    deleteTimer = new QTimer(this);  // Timer per rimuovere l'elemento dopo la fine
     connect(timer, &QTimer::timeout, this, &TimerItem::updateDisplay);
+    connect(deleteTimer, &QTimer::timeout, this, &TimerItem::removeTimer);
 }
 
 TimerItem::~TimerItem() {
@@ -57,11 +59,26 @@ void TimerItem::updateDisplay() {
                                        .arg(m, 2, 10, QChar('0'))
                                        .arg(s, 2, 10, QChar('0')));
     } else {
-        timer->stop();
-        isRunning = false;
-        ui->startPauseButton->setText("Start");
-        emit timerFinished(this);
+        handleTimerFinished();
     }
+}
+void TimerItem::handleTimerFinished() {
+    timer->stop();
+    isRunning = false;
+    ui->startPauseButton->setText("Start");
+
+    // Mostra il messaggio di avviso
+    ui->timerLabel->setText("TIMER SCADUTO!");
+    ui->timerLabel->setStyleSheet("color: red; font-weight: bold;");
+
+    emit timerFinished(this);
+
+    // Dopo 5 secondi il timer verrà rimosso
+    deleteTimer->start(5000);
+}
+
+void TimerItem::removeTimer() {
+    emit timerDeleted(this);
 }
 
 void TimerItem::on_startPauseButton_clicked() {
