@@ -23,45 +23,50 @@ public:
     QLabel *DateLabel;
     QLabel *ClockLabel;
     QPushButton *changeFormat;
-    QPushButton *pushButton;
+    QPushButton *openTimer;
     QPushButton *clockFormat;
+    QPushButton *openAllarm;
 
     void setupUi(QWidget *ClockWIndow)
     {
         if (ClockWIndow->objectName().isEmpty())
             ClockWIndow->setObjectName("ClockWIndow");
-        ClockWIndow->resize(1111, 488);
+        ClockWIndow->resize(1194, 597);
         DateLabel = new QLabel(ClockWIndow);
         DateLabel->setObjectName("DateLabel");
-        DateLabel->setGeometry(QRect(300, 20, 521, 71));
+        DateLabel->setGeometry(QRect(200, 30, 801, 101));
         QFont font;
-        font.setPointSize(30);
+        font.setPointSize(40);
         font.setBold(true);
         DateLabel->setFont(font);
         DateLabel->setAlignment(Qt::AlignmentFlag::AlignCenter);
         ClockLabel = new QLabel(ClockWIndow);
         ClockLabel->setObjectName("ClockLabel");
-        ClockLabel->setGeometry(QRect(130, 160, 851, 111));
+        ClockLabel->setGeometry(QRect(130, 180, 901, 181));
         QFont font1;
-        font1.setPointSize(50);
+        font1.setPointSize(60);
         font1.setBold(true);
         ClockLabel->setFont(font1);
         ClockLabel->setAlignment(Qt::AlignmentFlag::AlignCenter);
         changeFormat = new QPushButton(ClockWIndow);
         changeFormat->setObjectName("changeFormat");
-        changeFormat->setGeometry(QRect(40, 350, 201, 61));
+        changeFormat->setGeometry(QRect(30, 490, 181, 61));
         QFont font2;
         font2.setPointSize(12);
         font2.setBold(true);
         changeFormat->setFont(font2);
-        pushButton = new QPushButton(ClockWIndow);
-        pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(810, 350, 201, 61));
-        pushButton->setFont(font2);
+        openTimer = new QPushButton(ClockWIndow);
+        openTimer->setObjectName("openTimer");
+        openTimer->setGeometry(QRect(950, 490, 201, 61));
+        openTimer->setFont(font2);
         clockFormat = new QPushButton(ClockWIndow);
         clockFormat->setObjectName("clockFormat");
-        clockFormat->setGeometry(QRect(310, 350, 181, 61));
+        clockFormat->setGeometry(QRect(250, 490, 181, 61));
         clockFormat->setFont(font2);
+        openAllarm = new QPushButton(ClockWIndow);
+        openAllarm->setObjectName("openAllarm");
+        openAllarm->setGeometry(QRect(700, 490, 201, 61));
+        openAllarm->setFont(font2);
 
         retranslateUi(ClockWIndow);
 
@@ -74,8 +79,9 @@ public:
         DateLabel->setText(QCoreApplication::translate("ClockWIndow", "Date", nullptr));
         ClockLabel->setText(QCoreApplication::translate("ClockWIndow", "Clock", nullptr));
         changeFormat->setText(QCoreApplication::translate("ClockWIndow", "Format Date ", nullptr));
-        pushButton->setText(QCoreApplication::translate("ClockWIndow", "Start Timer", nullptr));
+        openTimer->setText(QCoreApplication::translate("ClockWIndow", "Start Timer", nullptr));
         clockFormat->setText(QCoreApplication::translate("ClockWIndow", "Format Clock", nullptr));
+        openAllarm->setText(QCoreApplication::translate("ClockWIndow", "Start Allarm", nullptr));
     } // retranslateUi
 
 };
