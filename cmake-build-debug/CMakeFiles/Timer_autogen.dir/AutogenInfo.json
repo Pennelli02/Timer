@@ -302,6 +302,12 @@
 			null
 		],
 		[
+			"C:/Users/Asus/CLionProjects/Timer/timeritem.h",
+			"MU",
+			"EWIEGA46WW/moc_timeritem.cpp",
+			null
+		],
+		[
 			"C:/Users/Asus/CLionProjects/Timer/timerwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_timerwindow.cpp",
@@ -392,6 +398,7 @@
 	[
 		[ "C:/Users/Asus/CLionProjects/Timer/clockwindow.cpp", "MU", null ],
 		[ "C:/Users/Asus/CLionProjects/Timer/main.cpp", "MU", null ],
+		[ "C:/Users/Asus/CLionProjects/Timer/timeritem.cpp", "MU", null ],
 		[ "C:/Users/Asus/CLionProjects/Timer/timerwindow.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],

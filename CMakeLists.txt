@@ -13,7 +13,7 @@ find_package(Qt6 COMPONENTS REQUIRED
         REQUIRED)
 
 
-add_executable(Timer main.cpp clockwindow.cpp clockwindow.h clockwindow.ui ui_ClockWIndow.h timerwindow.cpp timerwindow.h timerwindow.ui ui_TimerWindow.h)
+add_executable(Timer main.cpp clockwindow.cpp clockwindow.h clockwindow.ui ui_ClockWIndow.h timerwindow.cpp timerwindow.h timerwindow.ui ui_TimerWindow.h timeritem.cpp timeritem.h timeritem.ui)
 
 target_link_libraries(Timer
         Qt::Core
