@@ -7,20 +7,15 @@
 #include "timeritem.h"
 #include "ui_TimerItem.h"
 
-
 TimerItem::TimerItem(QWidget *parent) :
-        QWidget(parent), ui(new Ui::TimerItem), remainingSeconds(0),
+        QWidget(parent),
+        ui(new Ui::TimerItem),
+        remainingSeconds(0),
         isRunning(false) {
-    ui->setupUi(this);
-    // Ensure that text is visible on dark background
-    ui->timerLabel->setStyleSheet("color: white;");
-    ui->startPauseButton->setStyleSheet("background-color: #555555; color: white;");
-    ui->deleteTimer->setStyleSheet("background-color: #555555; color: white;");
 
+    ui->setupUi(this);
     timer = new QTimer(this);
     connect(timer, &QTimer::timeout, this, &TimerItem::updateDisplay);
-    connect(ui->startPauseButton, &QPushButton::clicked, this, &TimerItem::on_startPauseButton_clicked);
-    connect(ui->deleteTimer, &QPushButton::clicked, this, &TimerItem::on_deleteTimer_clicked);
 }
 
 TimerItem::~TimerItem() {
@@ -29,22 +24,28 @@ TimerItem::~TimerItem() {
 
 void TimerItem::setDuration(int hours, int minutes, int seconds) {
     remainingSeconds = (hours * 3600) + (minutes * 60) + seconds;
-    startTimer();
     updateDisplay();
+    startTimer();
 }
+
 void TimerItem::startTimer() {
-    if (remainingSeconds > 0 ) {
+    if (remainingSeconds > 0 && !isRunning) {
         timer->start(1000);
         isRunning = true;
         ui->startPauseButton->setText("Pause");
     }
 }
+
 void TimerItem::pauseTimer() {
+    if (isRunning) {
         timer->stop();
         isRunning = false;
         ui->startPauseButton->setText("Start");
-
+    }
 }
+
+
+
 void TimerItem::updateDisplay() {
     if (remainingSeconds > 0) {
         remainingSeconds--;
@@ -62,24 +63,14 @@ void TimerItem::updateDisplay() {
         emit timerFinished(this);
     }
 }
-void TimerItem::on_startPauseButton_clicked() {
-        if (timer->isActive()) {
-            // Il timer è attivo, quindi lo fermiamo
-            timer->stop();
-            ui->startPauseButton->setText("Start");
-            isRunning = false;
-        } else {
-            // Il timer è fermo, quindi lo avviamo
-            if (remainingSeconds > 0) {
-                timer->start(1000);
-                ui->startPauseButton->setText("Pause");
-                isRunning = true;
-            }
-        }
-    }
 
+void TimerItem::on_startPauseButton_clicked() {
+    if (isRunning)
+        pauseTimer();
+    else
+        startTimer();
+}
 
 void TimerItem::on_deleteTimer_clicked() {
     emit timerDeleted(this);
 }
-
