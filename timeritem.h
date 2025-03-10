@@ -7,7 +7,7 @@
 
 #include <QWidget>
 #include <QTimer>
-
+#include <QMessageBox>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class TimerItem; }

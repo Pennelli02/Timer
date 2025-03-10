@@ -25,7 +25,6 @@ public:
     QPushButton *changeFormat;
     QPushButton *openTimer;
     QPushButton *clockFormat;
-    QPushButton *openAllarm;
 
     void setupUi(QWidget *ClockWIndow)
     {
@@ -57,16 +56,12 @@ public:
         changeFormat->setFont(font2);
         openTimer = new QPushButton(ClockWIndow);
         openTimer->setObjectName("openTimer");
-        openTimer->setGeometry(QRect(950, 490, 201, 61));
+        openTimer->setGeometry(QRect(780, 490, 201, 61));
         openTimer->setFont(font2);
         clockFormat = new QPushButton(ClockWIndow);
         clockFormat->setObjectName("clockFormat");
         clockFormat->setGeometry(QRect(250, 490, 181, 61));
         clockFormat->setFont(font2);
-        openAllarm = new QPushButton(ClockWIndow);
-        openAllarm->setObjectName("openAllarm");
-        openAllarm->setGeometry(QRect(700, 490, 201, 61));
-        openAllarm->setFont(font2);
 
         retranslateUi(ClockWIndow);
 
@@ -81,7 +76,6 @@ public:
         changeFormat->setText(QCoreApplication::translate("ClockWIndow", "Format Date ", nullptr));
         openTimer->setText(QCoreApplication::translate("ClockWIndow", "Start Timer", nullptr));
         clockFormat->setText(QCoreApplication::translate("ClockWIndow", "Format Clock", nullptr));
-        openAllarm->setText(QCoreApplication::translate("ClockWIndow", "Start Allarm", nullptr));
     } // retranslateUi
 
 };

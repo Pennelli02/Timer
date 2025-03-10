@@ -71,6 +71,14 @@ void TimerItem::handleTimerFinished() {
     ui->timerLabel->setText("TIMER SCADUTO!");
     ui->timerLabel->setStyleSheet("color: red; font-weight: bold;");
 
+    // Mostra un pop-up di avviso
+    QMessageBox msgBox;
+    msgBox.setWindowTitle("Timer Scaduto");
+    msgBox.setText("Il timer è terminato!");
+    msgBox.setStyleSheet("font-size:20px; font-weight: bold;");
+    msgBox.setIcon(QMessageBox::Information);
+    msgBox.setStandardButtons(QMessageBox::Ok);
+    msgBox.exec();
     emit timerFinished(this);
 
     // Dopo 5 secondi il timer verrà rimosso

@@ -348,7 +348,11 @@ C:/Users/Asus/CLionProjects/Timer/cmake-build-debug/Timer_autogen/EWIEGA46WW/moc
   C:/Qt/6.8.2/mingw_64/include/QtGui/qtransform.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qwindowdefs_win.h \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/QMessageBox \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QWidget \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qdialog.h \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qmessagebox.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qsizepolicy.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtwidgets-config.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtwidgetsexports.h \
