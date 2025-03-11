@@ -27,7 +27,6 @@ TimerItem::~TimerItem() {
 void TimerItem::setDuration(int hours, int minutes, int seconds) {
     remainingSeconds = (hours * 3600) + (minutes * 60) + seconds;
     updateDisplay();
-    startTimer();
 }
 
 void TimerItem::startTimer() {
@@ -50,7 +49,8 @@ void TimerItem::pauseTimer() {
 
 void TimerItem::updateDisplay() {
     if (remainingSeconds > 0) {
-        remainingSeconds--;
+        timer->start(1000);
+
         int h = remainingSeconds / 3600;
         int m = (remainingSeconds % 3600) / 60;
         int s = remainingSeconds % 60;
@@ -58,6 +58,7 @@ void TimerItem::updateDisplay() {
                                        .arg(h, 2, 10, QChar('0'))
                                        .arg(m, 2, 10, QChar('0'))
                                        .arg(s, 2, 10, QChar('0')));
+        remainingSeconds--;
     } else {
         handleTimerFinished();
     }

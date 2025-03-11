@@ -44,7 +44,6 @@ void TimerWindow::addTimer() {
 
     TimerItem *timer = new TimerItem(this);
     timer->setDuration(hours, minutes, seconds);
-
     QListWidgetItem *item = new QListWidgetItem(ui->timersList);
     item->setSizeHint(QSize(ui->timersList->width() - 10, 119));
 

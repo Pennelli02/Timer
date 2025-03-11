@@ -21,13 +21,14 @@ Q_OBJECT
 public:
     explicit TimerItem(QWidget *parent = nullptr);
     void setDuration(int hours, int minutes, int seconds);
+    void startTimer();
     ~TimerItem() override;
 signals:
     void timerDeleted(TimerItem *timer);
     void timerFinished(TimerItem *timer);
 
 private slots:
-    void startTimer();
+
     void pauseTimer();
     void updateDisplay();
     void handleTimerFinished();
