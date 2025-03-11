@@ -235,11 +235,17 @@ C:/Users/Asus/CLionProjects/Timer/cmake-build-debug/Timer_autogen/EWIEGA46WW/moc
   C:/Qt/6.8.2/mingw_64/include/QtCore/qcontainerinfo.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qcontainertools_impl.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qcontiguouscache.h \
+  C:/Qt/6.8.2/mingw_64/include/QtCore/qcoreapplication.h \
+  C:/Qt/6.8.2/mingw_64/include/QtCore/qcoreapplication_platform.h \
+  C:/Qt/6.8.2/mingw_64/include/QtCore/qcoreevent.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qdarwinhelpers.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qdatastream.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qdatetime.h \
+  C:/Qt/6.8.2/mingw_64/include/QtCore/qdeadlinetimer.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qdebug.h \
+  C:/Qt/6.8.2/mingw_64/include/QtCore/qelapsedtimer.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qendian.h \
+  C:/Qt/6.8.2/mingw_64/include/QtCore/qeventloop.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qexceptionhandling.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qflags.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qfloat16.h \
@@ -268,6 +274,7 @@ C:/Users/Asus/CLionProjects/Timer/cmake-build-debug/Timer_autogen/EWIEGA46WW/moc
   C:/Qt/6.8.2/mingw_64/include/QtCore/qmetatype.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qminmax.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qnamespace.h \
+  C:/Qt/6.8.2/mingw_64/include/QtCore/qnativeinterface.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qnumeric.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qobject.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qobject_impl.h \
@@ -338,8 +345,11 @@ C:/Users/Asus/CLionProjects/Timer/cmake-build-debug/Timer_autogen/EWIEGA46WW/moc
   C:/Qt/6.8.2/mingw_64/include/QtGui/qfont.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qfontinfo.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qfontmetrics.h \
+  C:/Qt/6.8.2/mingw_64/include/QtGui/qguiapplication.h \
+  C:/Qt/6.8.2/mingw_64/include/QtGui/qguiapplication_platform.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qicon.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qimage.h \
+  C:/Qt/6.8.2/mingw_64/include/QtGui/qinputmethod.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qkeysequence.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qpaintdevice.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qpalette.h \
@@ -356,6 +366,7 @@ C:/Users/Asus/CLionProjects/Timer/cmake-build-debug/Timer_autogen/EWIEGA46WW/moc
   C:/Qt/6.8.2/mingw_64/include/QtGui/qvalidator.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qwindowdefs_win.h \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/QApplication \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QListWidget \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QMessageBox \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QWidget \
@@ -364,6 +375,7 @@ C:/Users/Asus/CLionProjects/Timer/cmake-build-debug/Timer_autogen/EWIEGA46WW/moc
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractscrollarea.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractslider.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractspinbox.h \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qapplication.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qdialog.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qframe.h \

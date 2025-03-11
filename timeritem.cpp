@@ -82,6 +82,10 @@ void TimerItem::handleTimerFinished() {
     msgBox.setIcon(QMessageBox::Information);
     msgBox.setStandardButtons(QMessageBox::Ok);
     msgBox.exec();
+
+    // Riproduce un suono di avviso non personalizzabile di sistema
+    playEndTimer();
+
     emit timerFinished(this);
 
     // Dopo 5 secondi il timer verrà rimosso
@@ -118,4 +122,8 @@ void TimerItem::repeatTimer() {
     ui->timerLabel->setStyleSheet("color: white");
     startTimer();
     isFinished= false;
+}
+
+void TimerItem::playEndTimer() {
+    QApplication::beep();
 }
