@@ -358,9 +358,8 @@ C:/Users/Asus/CLionProjects/Timer/mainwindow.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtwidgetsexports.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtwidgetsglobal.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qwidget.h
-C:/Users/Asus/CLionProjects/Timer/ui_MainWindow.h
 C:/Users/Asus/CLionProjects/Timer/mainwindow.cpp
-C:/Users/Asus/CLionProjects/Timer/main.cpp
+C:/Users/Asus/CLionProjects/Timer/ui_MainWindow.h
 C:/Users/Asus/CLionProjects/Timer/clockwindow.h
  mmc:Q_OBJECT
  mdp:C:/Users/Asus/CLionProjects/Timer/clockwindow.h
@@ -748,6 +747,7 @@ C:/Users/Asus/CLionProjects/Timer/clockwindow.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qwidget.h
  mdp:C:/Users/Asus/CLionProjects/Timer/timeritem.h
  mdp:C:/Users/Asus/CLionProjects/Timer/timerwindow.h
+C:/Users/Asus/CLionProjects/Timer/main.cpp
 C:/Users/Asus/CLionProjects/Timer/cmake-build-debug/Timer_autogen/include/ui_MainWindow.h
 C:/Users/Asus/CLionProjects/Timer/ui_ClockWIndow.h
 C:/Users/Asus/CLionProjects/Timer/clockwindow.cpp

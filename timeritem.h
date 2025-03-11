@@ -22,13 +22,14 @@ public:
     explicit TimerItem(QWidget *parent = nullptr);
     void setDuration(int hours, int minutes, int seconds);
     void startTimer();
+    int getRemainingSeconds() const;
     ~TimerItem() override;
 signals:
     void timerDeleted(TimerItem *timer);
     void timerFinished(TimerItem *timer);
 
 private slots:
-
+    void repeatTimer();
     void pauseTimer();
     void updateDisplay();
     void handleTimerFinished();
@@ -42,6 +43,8 @@ private:
     QTimer *deleteTimer;
     int remainingSeconds;
     bool isRunning;
+    bool isFinished;
+    int initialSeconds;
 };
 
 

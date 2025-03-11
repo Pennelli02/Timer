@@ -26,6 +26,7 @@ TimerItem::~TimerItem() {
 
 void TimerItem::setDuration(int hours, int minutes, int seconds) {
     remainingSeconds = (hours * 3600) + (minutes * 60) + seconds;
+    initialSeconds = remainingSeconds;
     updateDisplay();
 }
 
@@ -49,7 +50,7 @@ void TimerItem::pauseTimer() {
 
 void TimerItem::updateDisplay() {
     if (remainingSeconds > 0) {
-        timer->start(1000);
+        startTimer();
 
         int h = remainingSeconds / 3600;
         int m = (remainingSeconds % 3600) / 60;
@@ -66,7 +67,8 @@ void TimerItem::updateDisplay() {
 void TimerItem::handleTimerFinished() {
     timer->stop();
     isRunning = false;
-    ui->startPauseButton->setText("Start");
+    isFinished= true;
+    ui->startPauseButton->setText("Repeat");
 
     // Mostra il messaggio di avviso
     ui->timerLabel->setText("TIMER SCADUTO!");
@@ -91,12 +93,29 @@ void TimerItem::removeTimer() {
 }
 
 void TimerItem::on_startPauseButton_clicked() {
-    if (isRunning)
-        pauseTimer();
-    else
-        startTimer();
+    if(isFinished)
+        repeatTimer();
+    else{
+        if (isRunning)
+            pauseTimer();
+        else
+            startTimer();
+    }
 }
 
 void TimerItem::on_deleteTimer_clicked() {
     emit timerDeleted(this);
+}
+
+int TimerItem::getRemainingSeconds() const {
+    return remainingSeconds;
+}
+
+void TimerItem::repeatTimer() {
+    deleteTimer->stop(); // Ferma la cancellazione
+    remainingSeconds = initialSeconds;// Ripristina il tempo iniziale
+    ui->timerLabel->setText("...waiting...");
+    ui->timerLabel->setStyleSheet("color: white");
+    startTimer();
+    isFinished= false;
 }
