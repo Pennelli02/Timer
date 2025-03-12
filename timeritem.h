@@ -31,6 +31,7 @@ signals:
     void timerFinished(TimerItem *timer);
 
 private slots:
+    void playEndTimer();
     void repeatTimer();
     void pauseTimer();
     void updateDisplay();
@@ -43,6 +44,7 @@ private:
     Ui::TimerItem *ui;
     QTimer *timer;
     QTimer *deleteTimer;
+    QMediaPlayer *player;
     int remainingSeconds;
     bool isRunning;
     bool isFinished;

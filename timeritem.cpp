@@ -74,7 +74,7 @@ void TimerItem::handleTimerFinished() {
     // Mostra il messaggio di avviso
     ui->timerLabel->setText("TIMER SCADUTO!");
     ui->timerLabel->setStyleSheet("color: red; font-weight: bold;");
-
+    playEndTimer();
     // Mostra un pop-up di avviso
     QMessageBox msgBox;
     msgBox.setWindowTitle("Timer Scaduto");
@@ -82,6 +82,15 @@ void TimerItem::handleTimerFinished() {
     msgBox.setStyleSheet("font-size:20px; font-weight: bold;");
     msgBox.setIcon(QMessageBox::Information);
     msgBox.setStandardButtons(QMessageBox::Ok);
+    // Blocca il suono quando il messaggio viene chiuso
+    QObject::connect(&msgBox, &QMessageBox::finished, this, [=](int) {
+        if (player) {
+            player->stop();  // Ferma il suono
+            delete player;   // Libera memoria
+            player = nullptr;
+        }
+    });
+
     msgBox.exec();
 
     // Riproduce un suono di avviso non personalizzabile di sistema
@@ -124,3 +133,18 @@ void TimerItem::repeatTimer() {
     startTimer();
     isFinished= false;
 }
+void TimerItem::playEndTimer() {
+    if (player) {
+        delete player; // Rimuove il vecchio player se esiste già
+    }
+
+    player = new QMediaPlayer(this);
+    QAudioOutput *audioOutput = new QAudioOutput(this);
+
+    player->setAudioOutput(audioOutput);
+    player->setSource(QUrl::fromLocalFile("C:/Users/Asus/CLionProjects/Timer/mixkit-digital-clock-digital-alarm-buzzer-992.wav"));
+
+    audioOutput->setVolume(1.0);
+    player->play();
+}
+
