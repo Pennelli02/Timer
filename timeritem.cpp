@@ -142,7 +142,7 @@ void TimerItem::playEndTimer() {
     QAudioOutput *audioOutput = new QAudioOutput(this);
 
     player->setAudioOutput(audioOutput);
-    player->setSource(QUrl::fromLocalFile("C:/Users/Asus/CLionProjects/Timer/mixkit-digital-clock-digital-alarm-buzzer-992.wav"));
+    player->setSource(QUrl::fromLocalFile("sounds/alarm.wav"));
 
     audioOutput->setVolume(1.0);
     player->play();
