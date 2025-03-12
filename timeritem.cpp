@@ -134,9 +134,6 @@ void TimerItem::repeatTimer() {
     isFinished= false;
 }
 void TimerItem::playEndTimer() {
-    if (player) {
-        delete player; // Rimuove il vecchio player se esiste già
-    }
 
     player = new QMediaPlayer(this);
     QAudioOutput *audioOutput = new QAudioOutput(this);
