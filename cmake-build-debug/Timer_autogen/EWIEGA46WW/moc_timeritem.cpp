@@ -49,8 +49,7 @@ static constexpr auto qt_meta_stringdata_ZN9TimerItemE = QtMocHelpers::stringDat
     "handleTimerFinished",
     "removeTimer",
     "on_startPauseButton_clicked",
-    "on_deleteTimer_clicked",
-    "playEndTimer"
+    "on_deleteTimer_clicked"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -62,7 +61,7 @@ Q_CONSTINIT static const uint qt_meta_data_ZN9TimerItemE[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-      10,   14, // methods
+       9,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -70,25 +69,23 @@ Q_CONSTINIT static const uint qt_meta_data_ZN9TimerItemE[] = {
        2,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,   74,    2, 0x06,    1 /* Public */,
-       5,    1,   77,    2, 0x06,    3 /* Public */,
+       1,    1,   68,    2, 0x06,    1 /* Public */,
+       5,    1,   71,    2, 0x06,    3 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       6,    0,   80,    2, 0x08,    5 /* Private */,
-       7,    0,   81,    2, 0x08,    6 /* Private */,
-       8,    0,   82,    2, 0x08,    7 /* Private */,
-       9,    0,   83,    2, 0x08,    8 /* Private */,
-      10,    0,   84,    2, 0x08,    9 /* Private */,
-      11,    0,   85,    2, 0x08,   10 /* Private */,
-      12,    0,   86,    2, 0x08,   11 /* Private */,
-      13,    0,   87,    2, 0x08,   12 /* Private */,
+       6,    0,   74,    2, 0x08,    5 /* Private */,
+       7,    0,   75,    2, 0x08,    6 /* Private */,
+       8,    0,   76,    2, 0x08,    7 /* Private */,
+       9,    0,   77,    2, 0x08,    8 /* Private */,
+      10,    0,   78,    2, 0x08,    9 /* Private */,
+      11,    0,   79,    2, 0x08,   10 /* Private */,
+      12,    0,   80,    2, 0x08,   11 /* Private */,
 
  // signals: parameters
     QMetaType::Void, 0x80000000 | 3,    4,
     QMetaType::Void, 0x80000000 | 3,    4,
 
  // slots: parameters
-    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -128,8 +125,6 @@ Q_CONSTINIT const QMetaObject TimerItem::staticMetaObject = { {
         // method 'on_startPauseButton_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_deleteTimer_clicked'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'playEndTimer'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -149,7 +144,6 @@ void TimerItem::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         case 6: _t->removeTimer(); break;
         case 7: _t->on_startPauseButton_clicked(); break;
         case 8: _t->on_deleteTimer_clicked(); break;
-        case 9: _t->playEndTimer(); break;
         default: ;
         }
     }
@@ -210,14 +204,14 @@ int TimerItem::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 10)
+        if (_id < 9)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 10;
+        _id -= 9;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 10)
+        if (_id < 9)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 10;
+        _id -= 9;
     }
     return _id;
 }

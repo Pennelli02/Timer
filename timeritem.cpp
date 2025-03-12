@@ -85,7 +85,7 @@ void TimerItem::handleTimerFinished() {
     msgBox.exec();
 
     // Riproduce un suono di avviso non personalizzabile di sistema
-    playEndTimer();
+
 
     emit timerFinished(this);
 
