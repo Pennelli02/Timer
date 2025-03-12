@@ -4,6 +4,7 @@
 
 // You may need to build the project (run Qt uic code generator) to get "ui_TimerItem.h" resolved
 
+#include <QSoundEffect>
 #include "timeritem.h"
 #include "ui_TimerItem.h"
 
@@ -122,11 +123,4 @@ void TimerItem::repeatTimer() {
     ui->timerLabel->setStyleSheet("color: white");
     startTimer();
     isFinished= false;
-}
-
-void TimerItem::playEndTimer() {
-    // Riproduce un suono di avviso
-    QMediaPlayer *player = new QMediaPlayer(this);
-    player->setSource(QUrl("qrc:/sounds/alarm.mp3"));
-    player->play();
 }

@@ -349,8 +349,10 @@ C:/Users/Asus/CLionProjects/Timer/cmake-build-debug/Timer_autogen/EWIEGA46WW/moc
   C:/Qt/6.8.2/mingw_64/include/QtGui/qtransform.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qwindowdefs_win.h \
+  C:/Qt/6.8.2/mingw_64/include/QtMultimedia/QAudioOutput \
   C:/Qt/6.8.2/mingw_64/include/QtMultimedia/QMediaPlayer \
   C:/Qt/6.8.2/mingw_64/include/QtMultimedia/qaudio.h \
+  C:/Qt/6.8.2/mingw_64/include/QtMultimedia/qaudiooutput.h \
   C:/Qt/6.8.2/mingw_64/include/QtMultimedia/qmediaplayer.h \
   C:/Qt/6.8.2/mingw_64/include/QtMultimedia/qtaudio.h \
   C:/Qt/6.8.2/mingw_64/include/QtMultimedia/qtmultimedia-config.h \

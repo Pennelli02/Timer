@@ -362,8 +362,10 @@ C:/Users/Asus/CLionProjects/Timer/clockwindow.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qvalidator.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qwindowdefs.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qwindowdefs_win.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtMultimedia/QAudioOutput
  mdp:C:/Qt/6.8.2/mingw_64/include/QtMultimedia/QMediaPlayer
  mdp:C:/Qt/6.8.2/mingw_64/include/QtMultimedia/qaudio.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtMultimedia/qaudiooutput.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtMultimedia/qmediaplayer.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtMultimedia/qtaudio.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtMultimedia/qtmultimedia-config.h
@@ -749,8 +751,10 @@ C:/Users/Asus/CLionProjects/Timer/timeritem.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qtransform.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qwindowdefs.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qwindowdefs_win.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtMultimedia/QAudioOutput
  mdp:C:/Qt/6.8.2/mingw_64/include/QtMultimedia/QMediaPlayer
  mdp:C:/Qt/6.8.2/mingw_64/include/QtMultimedia/qaudio.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtMultimedia/qaudiooutput.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtMultimedia/qmediaplayer.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtMultimedia/qtaudio.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtMultimedia/qtmultimedia-config.h
@@ -1128,8 +1132,10 @@ C:/Users/Asus/CLionProjects/Timer/timerwindow.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qvalidator.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qwindowdefs.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtGui/qwindowdefs_win.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtMultimedia/QAudioOutput
  mdp:C:/Qt/6.8.2/mingw_64/include/QtMultimedia/QMediaPlayer
  mdp:C:/Qt/6.8.2/mingw_64/include/QtMultimedia/qaudio.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtMultimedia/qaudiooutput.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtMultimedia/qmediaplayer.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtMultimedia/qtaudio.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtMultimedia/qtmultimedia-config.h

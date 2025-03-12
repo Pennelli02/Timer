@@ -9,6 +9,7 @@
 #include <QTimer>
 #include <QMessageBox>
 #include <QMediaPlayer>
+#include <QAudioOutput>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class TimerItem; }
@@ -37,7 +38,6 @@ private slots:
     void removeTimer();
     void on_startPauseButton_clicked();
     void on_deleteTimer_clicked();
-    void playEndTimer();
 
 private:
     Ui::TimerItem *ui;

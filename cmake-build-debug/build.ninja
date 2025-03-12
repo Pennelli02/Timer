@@ -156,7 +156,7 @@ build Timer_autogen/timestamp Timer_autogen/mocs_compilation.cpp | ${cmake_ninja
 #############################################
 # Phony custom command for CMakeFiles\Timer_autogen_timestamp_deps
 
-build CMakeFiles/Timer_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/Timer_autogen_timestamp_deps: phony C$:/Qt/6.8.2/mingw_64/bin/Qt6Gui.dll C$:/Qt/6.8.2/mingw_64/bin/uic.exe C$:/Qt/6.8.2/mingw_64/bin/Qt6Core.dll C$:/Qt/6.8.2/mingw_64/bin/moc.exe C$:/Qt/6.8.2/mingw_64/bin/Qt6Multimedia.dll C$:/Qt/6.8.2/mingw_64/bin/Qt6Widgets.dll
+build CMakeFiles/Timer_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/Timer_autogen_timestamp_deps: phony C$:/Qt/6.8.2/mingw_64/bin/Qt6Gui.dll C$:/Qt/6.8.2/mingw_64/bin/Qt6Core.dll C$:/Qt/6.8.2/mingw_64/bin/uic.exe C$:/Qt/6.8.2/mingw_64/bin/moc.exe C$:/Qt/6.8.2/mingw_64/bin/Qt6Widgets.dll C$:/Qt/6.8.2/mingw_64/bin/Qt6Multimedia.dll
 
 
 #############################################
