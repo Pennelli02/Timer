@@ -125,5 +125,8 @@ void TimerItem::repeatTimer() {
 }
 
 void TimerItem::playEndTimer() {
-    QApplication::beep();
+    // Riproduce un suono di avviso
+    QMediaPlayer *player = new QMediaPlayer(this);
+    player->setSource(QUrl("qrc:/sounds/alarm.mp3"));
+    player->play();
 }

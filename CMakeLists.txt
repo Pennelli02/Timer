@@ -10,6 +10,7 @@ find_package(Qt6 COMPONENTS REQUIRED
         Core
         Widgets
         Gui
+        Multimedia
         REQUIRED)
 
 
@@ -18,7 +19,8 @@ add_executable(Timer main.cpp clockwindow.cpp clockwindow.h clockwindow.ui ui_Cl
 target_link_libraries(Timer
         Qt::Core
         Qt::Widgets
-        Qt::Gui)
+        Qt::Gui
+        Qt6::Multimedia)
 
 if (WIN32 AND NOT DEFINED CMAKE_TOOLCHAIN_FILE)
     set(DEBUG_SUFFIX)
