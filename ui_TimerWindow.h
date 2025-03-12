@@ -44,6 +44,7 @@ public:
         font.setBold(true);
         hourSpinBox->setFont(font);
         hourSpinBox->setAlignment(Qt::AlignmentFlag::AlignCenter);
+        hourSpinBox->setMaximum(23);
         hoursLabel = new QLabel(TimerWindow);
         hoursLabel->setObjectName("hoursLabel");
         hoursLabel->setGeometry(QRect(90, 20, 81, 31));
@@ -57,6 +58,7 @@ public:
         minSpinBox->setGeometry(QRect(210, 60, 81, 61));
         minSpinBox->setFont(font);
         minSpinBox->setAlignment(Qt::AlignmentFlag::AlignCenter);
+        minSpinBox->setMaximum(59);
         minutesLabel = new QLabel(TimerWindow);
         minutesLabel->setObjectName("minutesLabel");
         minutesLabel->setGeometry(QRect(210, 20, 81, 31));
@@ -67,6 +69,8 @@ public:
         secondsSpinBox->setGeometry(QRect(330, 60, 81, 61));
         secondsSpinBox->setFont(font);
         secondsSpinBox->setAlignment(Qt::AlignmentFlag::AlignCenter);
+        secondsSpinBox->setMinimum(0);
+        secondsSpinBox->setMaximum(59);
         secondsLabel = new QLabel(TimerWindow);
         secondsLabel->setObjectName("secondsLabel");
         secondsLabel->setGeometry(QRect(330, 20, 81, 31));

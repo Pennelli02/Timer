@@ -31,6 +31,9 @@
    <property name="alignment">
     <set>Qt::AlignmentFlag::AlignCenter</set>
    </property>
+   <property name="maximum">
+    <number>23</number>
+   </property>
   </widget>
   <widget class="QLabel" name="hoursLabel">
    <property name="geometry">
@@ -72,6 +75,9 @@
    <property name="alignment">
     <set>Qt::AlignmentFlag::AlignCenter</set>
    </property>
+   <property name="maximum">
+    <number>59</number>
+   </property>
   </widget>
   <widget class="QLabel" name="minutesLabel">
    <property name="geometry">
@@ -112,6 +118,12 @@
    </property>
    <property name="alignment">
     <set>Qt::AlignmentFlag::AlignCenter</set>
+   </property>
+   <property name="minimum">
+    <number>0</number>
+   </property>
+   <property name="maximum">
+    <number>59</number>
    </property>
   </widget>
   <widget class="QLabel" name="secondsLabel">
