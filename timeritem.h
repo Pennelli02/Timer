@@ -10,6 +10,7 @@
 #include <QMessageBox>
 #include <QMediaPlayer>
 #include <QAudioOutput>
+#include <QMenu>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class TimerItem; }
@@ -24,6 +25,7 @@ public:
     explicit TimerItem(QWidget *parent = nullptr);
     void setDuration(int hours, int minutes, int seconds);
     void startTimer();
+    void setMusicType(const QString &musicType);
     int getRemainingSeconds() const;
     ~TimerItem() override;
 signals:
@@ -41,6 +43,7 @@ private slots:
     void on_deleteTimer_clicked();
 
 private:
+    QString musicType;
     Ui::TimerItem *ui;
     QTimer *timer;
     QTimer *deleteTimer;

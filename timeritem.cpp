@@ -145,3 +145,8 @@ void TimerItem::playEndTimer() {
     player->play();
 }
 
+void TimerItem::setMusicType(const QString &musicType) {
+    TimerItem::musicType = musicType;
+}
+
+

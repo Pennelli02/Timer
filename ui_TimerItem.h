@@ -28,7 +28,7 @@ public:
     {
         if (TimerItem->objectName().isEmpty())
             TimerItem->setObjectName("TimerItem");
-        TimerItem->resize(725, 119);
+        TimerItem->resize(750, 125);
         timerLabel = new QLabel(TimerItem);
         timerLabel->setObjectName("timerLabel");
         timerLabel->setGeometry(QRect(30, 10, 321, 91));
@@ -38,14 +38,14 @@ public:
         timerLabel->setFont(font);
         startPauseButton = new QPushButton(TimerItem);
         startPauseButton->setObjectName("startPauseButton");
-        startPauseButton->setGeometry(QRect(390, 30, 101, 61));
+        startPauseButton->setGeometry(QRect(310, 30, 101, 61));
         QFont font1;
         font1.setPointSize(12);
         font1.setBold(true);
         startPauseButton->setFont(font1);
         deleteTimer = new QPushButton(TimerItem);
         deleteTimer->setObjectName("deleteTimer");
-        deleteTimer->setGeometry(QRect(550, 30, 101, 61));
+        deleteTimer->setGeometry(QRect(500, 30, 101, 61));
         deleteTimer->setFont(font1);
 
         retranslateUi(TimerItem);

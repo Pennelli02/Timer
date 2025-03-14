@@ -30,6 +30,8 @@ public:
     QLabel *secondsLabel;
     QPushButton *startTimer;
     QListWidget *timersList;
+    QPushButton *menuButton;
+    QLabel *label;
 
     void setupUi(QWidget *TimerWindow)
     {
@@ -79,12 +81,18 @@ public:
         startTimer = new QPushButton(TimerWindow);
         startTimer->setObjectName("startTimer");
         startTimer->setGeometry(QRect(480, 60, 81, 61));
-        QFont font2;
-        font2.setPointSize(12);
-        startTimer->setFont(font2);
+        startTimer->setFont(font1);
         timersList = new QListWidget(TimerWindow);
         timersList->setObjectName("timersList");
         timersList->setGeometry(QRect(40, 170, 911, 361));
+        menuButton = new QPushButton(TimerWindow);
+        menuButton->setObjectName("menuButton");
+        menuButton->setGeometry(QRect(720, 70, 161, 41));
+        menuButton->setFont(font1);
+        label = new QLabel(TimerWindow);
+        label->setObjectName("label");
+        label->setGeometry(QRect(730, 30, 151, 20));
+        label->setFont(font1);
 
         retranslateUi(TimerWindow);
 
@@ -98,6 +106,8 @@ public:
         minutesLabel->setText(QCoreApplication::translate("TimerWindow", "Minutes", nullptr));
         secondsLabel->setText(QCoreApplication::translate("TimerWindow", "Seconds", nullptr));
         startTimer->setText(QCoreApplication::translate("TimerWindow", "Start", nullptr));
+        menuButton->setText(QCoreApplication::translate("TimerWindow", "Sounds", nullptr));
+        label->setText(QCoreApplication::translate("TimerWindow", "Choose a sound", nullptr));
     } // retranslateUi
 
 };

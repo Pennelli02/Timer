@@ -10,6 +10,7 @@
 #include <QTime>
 #include <QListWidget>
 #include "timeritem.h"
+#include <QMenu>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class TimerWindow; }
@@ -25,8 +26,9 @@ public:
 private slots:
     void addTimer();       // Aggiunge un nuovo timer
     void removeTimer(TimerItem *timer);  // Rimuove un timer
-
+    void selectSound();
 private:
+    QString soundType;
     Ui::TimerWindow *ui;
     QList<TimerItem*> activeTimers; // Lista dei timer attivi
 };
