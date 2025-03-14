@@ -139,7 +139,7 @@ void TimerItem::playEndTimer() {
     QAudioOutput *audioOutput = new QAudioOutput(this);
 
     player->setAudioOutput(audioOutput);
-    player->setSource(QUrl::fromLocalFile("sounds/alarm.wav"));
+    player->setSource(QUrl::fromLocalFile(musicType));
 
     audioOutput->setVolume(1.0);
     player->play();

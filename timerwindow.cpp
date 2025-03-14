@@ -12,7 +12,7 @@ TimerWindow::TimerWindow(QWidget *parent) :
         QWidget(parent), ui(new Ui::TimerWindow) {
     ui->setupUi(this);
     setWindowTitle("Timer Manager");
-    soundType="/sounds/alarm.wav";
+    soundType="sounds/alarm.wav";
     ui->timersList->setSelectionMode(QAbstractItemView::NoSelection);
     ui->timersList->setUniformItemSizes(false);
     ui->timersList->setSpacing(5);
@@ -46,19 +46,31 @@ void TimerWindow::selectSound() {
     QAction *opzione2 = menu.addAction("Rooster crowing");
     QAction *opzione3 = menu.addAction("Retro game");
     QAction *opzione4 = menu.addAction("Slot machine");
+    QAction *opzione5 = menu.addAction("Siren");
+    QAction *opzione6 = menu.addAction("Bonus");
 
     // Mostrare il menu accanto al pulsante quando viene premuto
     QAction *selezionato = menu.exec(ui->menuButton->mapToGlobal(QPoint(0, ui->menuButton->height())));
 
     // Verifica quale opzione è stata selezionata
     if (selezionato == opzione1) {
-        soundType="/sounds/alarm.wav";
+        soundType="sounds/alarm.wav";
+        ui->menuButton->setText("Default alarm");
     } else if (selezionato == opzione2) {
-        soundType="/sounds/rooster-crowing.wav";
+        soundType="sounds/rooster-crowing.wav";
+        ui->menuButton->setText("Rooster crowing");
     }else if (selezionato==opzione3){
-        soundType="/sounds/retro-game.wav";
+        soundType="sounds/retro-game.wav";
+        ui->menuButton->setText("Retro game");
     } else if (selezionato==opzione4){
-        soundType="/sounds/slot-machine.wav";
+        soundType="sounds/slot-machine.wav";
+        ui->menuButton->setText("Slot machine");
+    }else if(selezionato==opzione5){
+        soundType="sounds/siren.wav";
+        ui->menuButton->setText("Siren");
+    } else if(selezionato==opzione6){
+        soundType="sounds/la fine.mp3";
+        ui->menuButton->setText("Bonus");
     }
 }
 
