@@ -87,11 +87,12 @@ void TimerWindow::addTimer() {
     QListWidgetItem *item = new QListWidgetItem(ui->timersList);
     item->setSizeHint(QSize(ui->timersList->width() - 10, 119));
 
+
     ui->timersList->addItem(item);
     ui->timersList->setItemWidget(item, timer);
     ui->timersList->scrollToItem(item);
-    activeTimers.append(timer);
 
+    activeTimers.append(timer);
     connect(timer, &TimerItem::timerDeleted, this, &TimerWindow::removeTimer);
 
 }
