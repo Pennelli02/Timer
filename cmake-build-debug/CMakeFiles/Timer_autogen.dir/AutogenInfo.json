@@ -365,6 +365,12 @@
 			null
 		],
 		[
+			"C:/Users/Asus/CLionProjects/Timer/titledialog.h",
+			"MU",
+			"EWIEGA46WW/moc_titledialog.cpp",
+			null
+		],
+		[
 			"C:/Users/Asus/CLionProjects/Timer/ui_ClockWIndow.h",
 			"MU",
 			"EWIEGA46WW/moc_ui_ClockWIndow.cpp",
@@ -374,6 +380,12 @@
 			"C:/Users/Asus/CLionProjects/Timer/ui_TimerWindow.h",
 			"MU",
 			"EWIEGA46WW/moc_ui_TimerWindow.cpp",
+			null
+		],
+		[
+			"C:/Users/Asus/CLionProjects/Timer/ui_TitleDIalog.h",
+			"MU",
+			"EWIEGA46WW/moc_ui_TitleDIalog.cpp",
 			null
 		]
 	],
@@ -454,7 +466,8 @@
 		[ "C:/Users/Asus/CLionProjects/Timer/clockwindow.cpp", "MU", null ],
 		[ "C:/Users/Asus/CLionProjects/Timer/main.cpp", "MU", null ],
 		[ "C:/Users/Asus/CLionProjects/Timer/timeritem.cpp", "MU", null ],
-		[ "C:/Users/Asus/CLionProjects/Timer/timerwindow.cpp", "MU", null ]
+		[ "C:/Users/Asus/CLionProjects/Timer/timerwindow.cpp", "MU", null ],
+		[ "C:/Users/Asus/CLionProjects/Timer/titledialog.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

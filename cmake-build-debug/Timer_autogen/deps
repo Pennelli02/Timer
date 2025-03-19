@@ -400,6 +400,7 @@ Timer_autogen/timestamp: \
 	C:/Qt/6.8.2/mingw_64/include/QtMultimedia/qtmultimedia-config.h \
 	C:/Qt/6.8.2/mingw_64/include/QtMultimedia/qtmultimediaexports.h \
 	C:/Qt/6.8.2/mingw_64/include/QtMultimedia/qtmultimediaglobal.h \
+	C:/Qt/6.8.2/mingw_64/include/QtWidgets/QDialog \
 	C:/Qt/6.8.2/mingw_64/include/QtWidgets/QListWidget \
 	C:/Qt/6.8.2/mingw_64/include/QtWidgets/QMenu \
 	C:/Qt/6.8.2/mingw_64/include/QtWidgets/QMessageBox \
@@ -654,9 +655,13 @@ Timer_autogen/timestamp: \
 	C:/Users/Asus/CLionProjects/Timer/timeritem.h \
 	C:/Users/Asus/CLionProjects/Timer/timerwindow.cpp \
 	C:/Users/Asus/CLionProjects/Timer/timerwindow.h \
+	C:/Users/Asus/CLionProjects/Timer/titledialog.cpp \
+	C:/Users/Asus/CLionProjects/Timer/titledialog.h \
 	C:/Users/Asus/CLionProjects/Timer/ui_ClockWIndow.h \
 	C:/Users/Asus/CLionProjects/Timer/ui_TimerWindow.h \
+	C:/Users/Asus/CLionProjects/Timer/ui_TitleDIalog.h \
 	C:/Users/Asus/CLionProjects/Timer/clockwindow.ui \
 	C:/Users/Asus/CLionProjects/Timer/timeritem.ui \
 	C:/Users/Asus/CLionProjects/Timer/timerwindow.ui \
+	C:/Users/Asus/CLionProjects/Timer/titledialog.ui \
 	C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/cmake/win/bin/cmake.exe

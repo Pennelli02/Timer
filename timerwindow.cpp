@@ -6,6 +6,7 @@
 
 #include "timerwindow.h"
 #include "ui_TimerWindow.h"
+#include "titledialog.h"
 
 
 TimerWindow::TimerWindow(QWidget *parent) :
@@ -13,12 +14,14 @@ TimerWindow::TimerWindow(QWidget *parent) :
     ui->setupUi(this);
     setWindowTitle("Timer Manager");
     soundType="sounds/alarm.wav";
+    genericTitle="Timer";
     ui->timersList->setSelectionMode(QAbstractItemView::NoSelection);
     ui->timersList->setUniformItemSizes(false);
     ui->timersList->setSpacing(5);
     ui->timersList->setStyleSheet("QListWidget { background-color: #2a2a2a; }");
     connect(ui->startTimer, &QPushButton::clicked, this, &TimerWindow::addTimer);
     connect(ui->menuButton, &QPushButton::clicked, this, &TimerWindow::selectSound);
+    connect(ui->titleButton, &QPushButton::clicked, this, &TimerWindow::showTitleEditor);
 }
 
 TimerWindow::~TimerWindow() {
@@ -84,6 +87,7 @@ void TimerWindow::addTimer() {
     TimerItem *timer = new TimerItem(this);
     timer->setMusicType(soundType);
     timer->showTypeSound(ui->menuButton->text());
+    timer->setTitle(genericTitle);
     timer->setDuration(hours, minutes, seconds);
     QListWidgetItem *item = new QListWidgetItem(ui->timersList);
     item->setSizeHint(QSize(ui->timersList->width() - 10, 119));
@@ -94,8 +98,17 @@ void TimerWindow::addTimer() {
     ui->timersList->scrollToItem(item);
 
     activeTimers.append(timer);
+    genericTitle="Timer";
     connect(timer, &TimerItem::timerDeleted, this, &TimerWindow::removeTimer);
 
+}
+
+void TimerWindow::showTitleEditor() {
+    TitleDIalog dialog(this);
+    dialog.setTitle(genericTitle);
+    if (dialog.exec() == QDialog::Accepted) {
+        genericTitle = dialog.getTitle(); // Ottieni il titolo aggiornato
+    }
 }
 
 

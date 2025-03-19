@@ -19,6 +19,7 @@ TimerItem::TimerItem(QWidget *parent) :
     deleteTimer = new QTimer(this);  // Timer per rimuovere l'elemento dopo la fine
     connect(timer, &QTimer::timeout, this, &TimerItem::updateDisplay);
     connect(deleteTimer, &QTimer::timeout, this, &TimerItem::removeTimer);
+
 }
 
 TimerItem::~TimerItem() {
@@ -77,7 +78,7 @@ void TimerItem::handleTimerFinished() {
     playEndTimer();
     // Mostra un pop-up di avviso
     QMessageBox msgBox;
-    msgBox.setWindowTitle("Timer Scaduto");
+    msgBox.setWindowTitle(title);
     msgBox.setText("Il timer è terminato!");
     msgBox.setStyleSheet("font-size:20px; font-weight: bold;");
     msgBox.setIcon(QMessageBox::Information);
@@ -149,7 +150,11 @@ void TimerItem::setMusicType(const QString &musicType) {
     TimerItem::musicType = musicType;
 }
 
-void TimerItem::showTypeSound(QString labelText) {
+void TimerItem::setTitle(const QString &title) {
+    TimerItem::title=title;
+}
+
+void TimerItem::showTypeSound(const QString &labelText) {
     ui->soundLabel->setText(labelText);
 }
 

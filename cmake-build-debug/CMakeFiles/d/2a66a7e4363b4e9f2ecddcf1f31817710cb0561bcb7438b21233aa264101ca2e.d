@@ -400,6 +400,7 @@ Timer_autogen/timestamp: \
   C:/Qt/6.8.2/mingw_64/include/QtMultimedia/qtmultimedia-config.h \
   C:/Qt/6.8.2/mingw_64/include/QtMultimedia/qtmultimediaexports.h \
   C:/Qt/6.8.2/mingw_64/include/QtMultimedia/qtmultimediaglobal.h \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/QDialog \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QListWidget \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QMenu \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QMessageBox \
@@ -654,9 +655,13 @@ Timer_autogen/timestamp: \
   ../timeritem.h \
   ../timerwindow.cpp \
   ../timerwindow.h \
+  ../titledialog.cpp \
+  ../titledialog.h \
   ../ui_ClockWIndow.h \
   ../ui_TimerWindow.h \
+  ../ui_TitleDIalog.h \
   ../clockwindow.ui \
   ../timeritem.ui \
   ../timerwindow.ui \
+  ../titledialog.ui \
   C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/cmake/win/bin/cmake.exe

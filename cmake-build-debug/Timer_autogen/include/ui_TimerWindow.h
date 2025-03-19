@@ -32,6 +32,7 @@ public:
     QListWidget *timersList;
     QPushButton *menuButton;
     QLabel *label;
+    QPushButton *titleButton;
 
     void setupUi(QWidget *TimerWindow)
     {
@@ -87,12 +88,16 @@ public:
         timersList->setGeometry(QRect(40, 170, 911, 361));
         menuButton = new QPushButton(TimerWindow);
         menuButton->setObjectName("menuButton");
-        menuButton->setGeometry(QRect(720, 70, 161, 41));
+        menuButton->setGeometry(QRect(620, 70, 161, 41));
         menuButton->setFont(font1);
         label = new QLabel(TimerWindow);
         label->setObjectName("label");
-        label->setGeometry(QRect(730, 30, 151, 20));
+        label->setGeometry(QRect(630, 30, 151, 20));
         label->setFont(font1);
+        titleButton = new QPushButton(TimerWindow);
+        titleButton->setObjectName("titleButton");
+        titleButton->setGeometry(QRect(820, 70, 161, 41));
+        titleButton->setFont(font1);
 
         retranslateUi(TimerWindow);
 
@@ -108,6 +113,7 @@ public:
         startTimer->setText(QCoreApplication::translate("TimerWindow", "Start", nullptr));
         menuButton->setText(QCoreApplication::translate("TimerWindow", "Sounds", nullptr));
         label->setText(QCoreApplication::translate("TimerWindow", "Choose a sound", nullptr));
+        titleButton->setText(QCoreApplication::translate("TimerWindow", "Give a Title", nullptr));
     } // retranslateUi
 
 };

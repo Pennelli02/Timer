@@ -27,7 +27,9 @@ private slots:
     void addTimer();       // Aggiunge un nuovo timer
     void removeTimer(TimerItem *timer);  // Rimuove un timer
     void selectSound();
+    void showTitleEditor();
 private:
+    QString genericTitle;
     QString soundType;
     Ui::TimerWindow *ui;
     QList<TimerItem*> activeTimers; // Lista dei timer attivi

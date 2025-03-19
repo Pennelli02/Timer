@@ -28,7 +28,8 @@ public:
     void setMusicType(const QString &musicType);
     int getRemainingSeconds() const;
     ~TimerItem() override;
-    void showTypeSound(QString  labelText);
+    void showTypeSound(const QString  &labelText);
+    void setTitle(const QString &title);
 signals:
     void timerDeleted(TimerItem *timer);
     void timerFinished(TimerItem *timer);
@@ -45,6 +46,7 @@ private slots:
 
 
 private:
+    QString title;
     QString musicType;
     Ui::TimerItem *ui;
     QTimer *timer;

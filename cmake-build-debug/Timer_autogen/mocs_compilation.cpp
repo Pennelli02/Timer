@@ -2,3 +2,4 @@
 #include "EWIEGA46WW/moc_clockwindow.cpp"
 #include "EWIEGA46WW/moc_timeritem.cpp"
 #include "EWIEGA46WW/moc_timerwindow.cpp"
+#include "EWIEGA46WW/moc_titledialog.cpp"
