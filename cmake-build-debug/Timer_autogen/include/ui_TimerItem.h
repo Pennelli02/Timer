@@ -23,12 +23,13 @@ public:
     QLabel *timerLabel;
     QPushButton *startPauseButton;
     QPushButton *deleteTimer;
+    QLabel *soundLabel;
 
     void setupUi(QWidget *TimerItem)
     {
         if (TimerItem->objectName().isEmpty())
             TimerItem->setObjectName("TimerItem");
-        TimerItem->resize(750, 125);
+        TimerItem->resize(882, 125);
         timerLabel = new QLabel(TimerItem);
         timerLabel->setObjectName("timerLabel");
         timerLabel->setGeometry(QRect(30, 10, 321, 91));
@@ -47,6 +48,15 @@ public:
         deleteTimer->setObjectName("deleteTimer");
         deleteTimer->setGeometry(QRect(500, 30, 101, 61));
         deleteTimer->setFont(font1);
+        soundLabel = new QLabel(TimerItem);
+        soundLabel->setObjectName("soundLabel");
+        soundLabel->setGeometry(QRect(650, 30, 181, 61));
+        QFont font2;
+        font2.setPointSize(12);
+        font2.setBold(true);
+        font2.setItalic(true);
+        soundLabel->setFont(font2);
+        soundLabel->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
         retranslateUi(TimerItem);
 
@@ -59,6 +69,7 @@ public:
         timerLabel->setText(QCoreApplication::translate("TimerItem", "Timer clock", nullptr));
         startPauseButton->setText(QCoreApplication::translate("TimerItem", "Pause", nullptr));
         deleteTimer->setText(QCoreApplication::translate("TimerItem", "Delete", nullptr));
+        soundLabel->setText(QCoreApplication::translate("TimerItem", "sound", nullptr));
     } // retranslateUi
 
 };

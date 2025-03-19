@@ -149,4 +149,8 @@ void TimerItem::setMusicType(const QString &musicType) {
     TimerItem::musicType = musicType;
 }
 
+void TimerItem::showTypeSound(QString labelText) {
+    ui->soundLabel->setText(labelText);
+}
+
 
