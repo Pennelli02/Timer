@@ -41,7 +41,7 @@ void TimerWindow::removeTimer(TimerItem *timer) {
 }
 
 void TimerWindow::selectSound() {
-// Creazione del menu a tendina
+    // Creazione del menu a tendina
     QMenu menu(this);
 
     // Aggiunta delle opzioni al menu
@@ -55,24 +55,27 @@ void TimerWindow::selectSound() {
     // Mostrare il menu accanto al pulsante quando viene premuto
     QAction *selezionato = menu.exec(ui->menuButton->mapToGlobal(QPoint(0, ui->menuButton->height())));
 
+    // Percorso base per i file audio
+    QString soundsPath = "sounds/";
+
     // Verifica quale opzione è stata selezionata
     if (selezionato == opzione1) {
-        soundType="sounds/alarm.wav";
+        soundType = soundsPath + "alarm.wav";
         ui->menuButton->setText("Default alarm");
     } else if (selezionato == opzione2) {
-        soundType="sounds/rooster-crowing.wav";
+        soundType = soundsPath + "rooster-crowing.wav";
         ui->menuButton->setText("Rooster crowing");
-    }else if (selezionato==opzione3){
-        soundType="sounds/retro-game.wav";
+    } else if (selezionato == opzione3) {
+        soundType = soundsPath + "retro-game.wav";
         ui->menuButton->setText("Retro game");
-    } else if (selezionato==opzione4){
-        soundType="sounds/slot-machine.wav";
+    } else if (selezionato == opzione4) {
+        soundType = soundsPath + "slot-machine.wav";
         ui->menuButton->setText("Slot machine");
-    }else if(selezionato==opzione5){
-        soundType="sounds/siren.wav";
+    } else if(selezionato == opzione5) {
+        soundType = soundsPath + "siren.wav";
         ui->menuButton->setText("Siren");
-    } else if(selezionato==opzione6){
-        soundType="sounds/la fine.mp3";
+    } else if(selezionato == opzione6) {
+        soundType = soundsPath + "la fine.mp3";
         ui->menuButton->setText("Bonus");
     }
 }

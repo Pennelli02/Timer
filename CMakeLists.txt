@@ -50,3 +50,12 @@ if (WIN32 AND NOT DEFINED CMAKE_TOOLCHAIN_FILE)
                 "$<TARGET_FILE_DIR:Timer>")
     endforeach ()
 endif ()
+
+# Definisci il percorso della cartella sounds
+set(SOUNDS_DIR ${CMAKE_CURRENT_SOURCE_DIR}/sounds)
+
+# Copia i file audio nella directory di build
+add_custom_command(TARGET Timer POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_directory
+        ${SOUNDS_DIR} $<TARGET_FILE_DIR:Timer>/sounds
+        )
