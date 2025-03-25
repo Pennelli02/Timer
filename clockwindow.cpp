@@ -24,6 +24,7 @@ ClockWIndow::ClockWIndow(QWidget *parent) :
 
 ClockWIndow::~ClockWIndow() {
     delete ui;
+    delete timerWindow;
 }
 
 void ClockWIndow::showTime() {
@@ -91,5 +92,35 @@ void ClockWIndow::showTimerWindow() {
         timerWindow = new TimerWindow();
     }
     timerWindow->show();
+}
+
+
+
+int ClockWIndow::getCurrentDateIndex() const {
+    return currentDateIndex;
+}
+
+int ClockWIndow::getCurrentClockIndex() const {
+    return currentClockIndex;
+}
+
+TimerWindow *ClockWIndow::getTimerWindow() const {
+    return timerWindow;
+}
+
+QLabel *ClockWIndow::getClockLabel() const {
+    return ui->ClockLabel;
+}
+
+QLabel *ClockWIndow::getDateLabel() const {
+    return ui->DateLabel;
+}
+
+QString ClockWIndow::getClockLabelText() const {
+    return ui->ClockLabel->text();
+}
+
+QString ClockWIndow::getDateLabelText() const {
+    return ui->DateLabel->text();
 }
 

@@ -614,6 +614,14 @@ Timer_autogen/timestamp: \
   C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginConfig.cmake \
   C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginTargets-relwithdebinfo.cmake \
   C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginTargets.cmake \
+  C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Test/Qt6TestAdditionalTargetInfo.cmake \
+  C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Test/Qt6TestConfig.cmake \
+  C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Test/Qt6TestConfigVersion.cmake \
+  C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Test/Qt6TestConfigVersionImpl.cmake \
+  C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Test/Qt6TestDependencies.cmake \
+  C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Test/Qt6TestTargets-relwithdebinfo.cmake \
+  C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Test/Qt6TestTargets.cmake \
+  C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Test/Qt6TestVersionlessAliasTargets.cmake \
   C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginAdditionalTargetInfo.cmake \
   C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginConfig.cmake \
   C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginTargets-relwithdebinfo.cmake \

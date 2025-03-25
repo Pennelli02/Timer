@@ -11,6 +11,7 @@ find_package(Qt6 COMPONENTS REQUIRED
         Widgets
         Gui
         Multimedia
+        Test
         REQUIRED)
 
 
@@ -59,3 +60,8 @@ add_custom_command(TARGET Timer POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy_directory
         ${SOUNDS_DIR} $<TARGET_FILE_DIR:Timer>/sounds
         )
+# Abilita il testing
+enable_testing()
+
+# Aggiungi la directory dei test
+add_subdirectory(tests)

@@ -19,6 +19,16 @@ Q_OBJECT
 public:
     explicit ClockWIndow(QWidget *parent = nullptr);
 
+
+// getter per i test
+    int getCurrentDateIndex() const;
+    int getCurrentClockIndex() const;
+    TimerWindow *getTimerWindow() const;
+    QLabel* getClockLabel() const;
+    QLabel* getDateLabel() const;
+    QString getClockLabelText() const;
+    QString getDateLabelText() const;
+
     ~ClockWIndow() override;
 private slots:
     void showTime();
