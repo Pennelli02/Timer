@@ -19,7 +19,7 @@ ClockWIndow::ClockWIndow(QWidget *parent) :
     connect(ui->changeFormat, &QPushButton::clicked, this, &ClockWIndow::changeDateFormat);
     connect(ui->clockFormat, &QPushButton::clicked, this, &ClockWIndow::changeClockFormat);
     connect(ui->openTimer, &QPushButton::clicked, this, &ClockWIndow::showTimerWindow);
-    changeDateFormat();
+    showDate();
 }
 
 ClockWIndow::~ClockWIndow() {
@@ -61,25 +61,9 @@ void ClockWIndow::showTime() {
 }
 
 void ClockWIndow::changeDateFormat() {
-    QDateTime date = QDateTime::currentDateTime();
-    QString dateText;
-
-    // Lista di formati di data
-    QStringList formats = {
-            "dd/MM/yyyy",          // Formato 1: giorno/mese/anno
-            "dddd, dd MMMM yyyy",  // Formato 2: giorno della settimana, giorno mese anno
-            "yyyy-MM-dd",          // Formato 3: anno-mese-giorno (ISO)
-            "dd MMMM yyyy"         // Formato 4: giorno mese anno (con nome del mese)
-    };
-
-    // Seleziona il formato corrente
-    dateText = date.toString(formats[currentDateIndex]);
-
-    // Aggiorna l'etichetta con la data formattata
-    ui->DateLabel->setText(dateText);
-
     // Passa al formato successivo
-    currentDateIndex = (currentDateIndex + 1) % formats.size();
+    currentDateIndex = (currentDateIndex + 1) % 4;
+    showDate();
 }
 
 void ClockWIndow::changeClockFormat() {
@@ -122,5 +106,24 @@ QString ClockWIndow::getClockLabelText() const {
 
 QString ClockWIndow::getDateLabelText() const {
     return ui->DateLabel->text();
+}
+
+void ClockWIndow::showDate() {
+    QDateTime date = QDateTime::currentDateTime();
+    QString dateText;
+
+    // Lista di formati di data
+    QStringList formats = {
+            "dd/MM/yyyy",          // Formato 1: giorno/mese/anno
+            "dddd, dd MMMM yyyy",  // Formato 2: giorno della settimana, giorno mese anno
+            "yyyy-MM-dd",          // Formato 3: anno-mese-giorno (ISO)
+            "dd MMMM yyyy"         // Formato 4: giorno mese anno (con nome del mese)
+    };
+
+    // Seleziona il formato corrente
+    dateText = date.toString(formats[currentDateIndex]);
+
+    // Aggiorna l'etichetta con la data formattata
+    ui->DateLabel->setText(dateText);
 }
 

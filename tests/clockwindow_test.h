@@ -8,6 +8,8 @@
 #include <QTest>
 #include "../clockwindow.h"
 
+
+
 class clockwindow_test: public QObject
         {
         Q_OBJECT

@@ -60,8 +60,44 @@ add_custom_command(TARGET Timer POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy_directory
         ${SOUNDS_DIR} $<TARGET_FILE_DIR:Timer>/sounds
         )
-# Abilita il testing
+# ... [previous content remains the same until the testing section] ...
+
+# Testing
 enable_testing()
 
-# Aggiungi la directory dei test
-add_subdirectory(tests)
+# Create a library with the code you want to test
+add_library(Timer_lib
+        clockwindow.cpp clockwindow.h
+        timerwindow.cpp timerwindow.h
+        timeritem.cpp timeritem.h
+        titledialog.cpp titledialog.h)
+
+target_link_libraries(Timer_lib
+        Qt6::Core
+        Qt6::Gui
+        Qt6::Widgets
+        Qt6::Multimedia)
+
+# Link the main executable to the library
+target_link_libraries(Timer Timer_lib)
+
+# Test executable
+add_executable(Timer_test
+        tests/clockwindow_test.cpp
+        tests/clockwindow_test.h)
+
+set_target_properties(Timer_test PROPERTIES AUTOMOC ON)
+
+target_link_libraries(Timer_test
+        Timer_lib  # Link to the library instead of the executable
+        Qt6::Core
+        Qt6::Gui
+        Qt6::Widgets
+        Qt6::Multimedia
+        Qt6::Test)
+
+target_include_directories(Timer_test PRIVATE
+        "${CMAKE_BINARY_DIR}"
+        "${CMAKE_SOURCE_DIR}")
+
+add_test(NAME Timer_test COMMAND Timer_test)

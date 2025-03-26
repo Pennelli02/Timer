@@ -237,6 +237,7 @@ C:/Users/Asus/CLionProjects/Timer/cmake-build-debug/tests/Timer_test_autogen/inc
   C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/x86_64-w64-mingw32/include/vadefs.h \
   C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/x86_64-w64-mingw32/include/wchar.h \
   C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/mingw/x86_64-w64-mingw32/include/wctype.h \
+  C:/Qt/6.8.2/mingw_64/include/QtCore/QDateTime \
   C:/Qt/6.8.2/mingw_64/include/QtCore/QDebug \
   C:/Qt/6.8.2/mingw_64/include/QtCore/QEvent \
   C:/Qt/6.8.2/mingw_64/include/QtCore/QFlags \
@@ -341,6 +342,7 @@ C:/Users/Asus/CLionProjects/Timer/cmake-build-debug/tests/Timer_test_autogen/inc
   C:/Qt/6.8.2/mingw_64/include/QtCore/qmetaobject.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qmetatype.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qminmax.h \
+  C:/Qt/6.8.2/mingw_64/include/QtCore/qmutex.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qnamespace.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qnativeinterface.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qnumeric.h \
@@ -398,6 +400,7 @@ C:/Users/Asus/CLionProjects/Timer/cmake-build-debug/tests/Timer_test_autogen/inc
   C:/Qt/6.8.2/mingw_64/include/QtCore/qtnoop.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qtpreprocessorsupport.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qtresource.h \
+  C:/Qt/6.8.2/mingw_64/include/QtCore/qtsan_impl.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qttranslation.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qttypetraits.h \
   C:/Qt/6.8.2/mingw_64/include/QtCore/qtversion.h \
@@ -433,6 +436,7 @@ C:/Users/Asus/CLionProjects/Timer/cmake-build-debug/tests/Timer_test_autogen/inc
   C:/Qt/6.8.2/mingw_64/include/QtGui/qkeysequence.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qpaintdevice.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qpalette.h \
+  C:/Qt/6.8.2/mingw_64/include/QtGui/qpicture.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qpixelformat.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qpixmap.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qpointingdevice.h \
@@ -445,6 +449,7 @@ C:/Users/Asus/CLionProjects/Timer/cmake-build-debug/tests/Timer_test_autogen/inc
   C:/Qt/6.8.2/mingw_64/include/QtGui/qsurface.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qsurfaceformat.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qtestsupport_gui.h \
+  C:/Qt/6.8.2/mingw_64/include/QtGui/qtextdocument.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qtgui-config.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qtguiexports.h \
   C:/Qt/6.8.2/mingw_64/include/QtGui/qtguiglobal.h \
@@ -490,9 +495,11 @@ C:/Users/Asus/CLionProjects/Timer/cmake-build-debug/tests/Timer_test_autogen/inc
   C:/Qt/6.8.2/mingw_64/include/QtNetwork/qtnetwork-config.h \
   C:/Qt/6.8.2/mingw_64/include/QtNetwork/qtnetworkexports.h \
   C:/Qt/6.8.2/mingw_64/include/QtNetwork/qtnetworkglobal.h \
+  C:/Qt/6.8.2/mingw_64/include/QtTest/QSignalSpy \
   C:/Qt/6.8.2/mingw_64/include/QtTest/QTest \
   C:/Qt/6.8.2/mingw_64/include/QtTest/qbenchmark.h \
   C:/Qt/6.8.2/mingw_64/include/QtTest/qbenchmarkmetric.h \
+  C:/Qt/6.8.2/mingw_64/include/QtTest/qsignalspy.h \
   C:/Qt/6.8.2/mingw_64/include/QtTest/qtest.h \
   C:/Qt/6.8.2/mingw_64/include/QtTest/qtest_gui.h \
   C:/Qt/6.8.2/mingw_64/include/QtTest/qtest_network.h \
@@ -501,6 +508,7 @@ C:/Users/Asus/CLionProjects/Timer/cmake-build-debug/tests/Timer_test_autogen/inc
   C:/Qt/6.8.2/mingw_64/include/QtTest/qtestcase.h \
   C:/Qt/6.8.2/mingw_64/include/QtTest/qtestdata.h \
   C:/Qt/6.8.2/mingw_64/include/QtTest/qtestevent.h \
+  C:/Qt/6.8.2/mingw_64/include/QtTest/qtesteventloop.h \
   C:/Qt/6.8.2/mingw_64/include/QtTest/qtestkeyboard.h \
   C:/Qt/6.8.2/mingw_64/include/QtTest/qtestmouse.h \
   C:/Qt/6.8.2/mingw_64/include/QtTest/qtestspontaneevent.h \
@@ -511,11 +519,17 @@ C:/Users/Asus/CLionProjects/Timer/cmake-build-debug/tests/Timer_test_autogen/inc
   C:/Qt/6.8.2/mingw_64/include/QtTest/qttestexports.h \
   C:/Qt/6.8.2/mingw_64/include/QtTest/qttestglobal.h \
   C:/Qt/6.8.2/mingw_64/include/QtTest/qttestlib-config.h \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/QApplication \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/QDialog \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/QLabel \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QListWidget \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QMenu \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QMessageBox \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/QPushButton \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QSizePolicy \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/QSpinBox \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QWidget \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractbutton.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractitemview.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractscrollarea.h \
@@ -525,13 +539,16 @@ C:/Users/Asus/CLionProjects/Timer/cmake-build-debug/tests/Timer_test_autogen/inc
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qdialog.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qframe.h \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlabel.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlistview.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlistwidget.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qmenu.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qmessagebox.h \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qpushbutton.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qrubberband.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qsizepolicy.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qslider.h \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qspinbox.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qstyle.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qstyleoption.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtabbar.h \
@@ -541,7 +558,12 @@ C:/Users/Asus/CLionProjects/Timer/cmake-build-debug/tests/Timer_test_autogen/inc
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtwidgetsexports.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qwidget.h \
+  C:/Users/Asus/CLionProjects/Timer/clockwindow.cpp \
   C:/Users/Asus/CLionProjects/Timer/clockwindow.h \
   C:/Users/Asus/CLionProjects/Timer/tests/clockwindow_test.h \
   C:/Users/Asus/CLionProjects/Timer/timeritem.h \
-  C:/Users/Asus/CLionProjects/Timer/timerwindow.h
+  C:/Users/Asus/CLionProjects/Timer/timerwindow.cpp \
+  C:/Users/Asus/CLionProjects/Timer/timerwindow.h \
+  C:/Users/Asus/CLionProjects/Timer/titledialog.h \
+  C:/Users/Asus/CLionProjects/Timer/ui_ClockWIndow.h \
+  C:/Users/Asus/CLionProjects/Timer/ui_TimerWindow.h

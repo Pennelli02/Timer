@@ -18,8 +18,9 @@ Q_OBJECT
 
 public:
     explicit ClockWIndow(QWidget *parent = nullptr);
-
-
+    void testAccess_changeDateFormat() { changeDateFormat(); }
+    void testAccess_changeClockFormat() { changeClockFormat(); }
+    void testAccess_showTimerWindow() { showTimerWindow(); }
 // getter per i test
     int getCurrentDateIndex() const;
     int getCurrentClockIndex() const;
@@ -35,7 +36,7 @@ private slots:
     void changeDateFormat();
     void changeClockFormat();
     void showTimerWindow();
-
+    void showDate();
 private:
     Ui::ClockWIndow *ui;
     int currentDateIndex;
