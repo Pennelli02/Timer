@@ -42,6 +42,12 @@ private:
     int currentDateIndex;
     int currentClockIndex;
     TimerWindow *timerWindow;
+    QStringList formats = {
+            "dd/MM/yyyy",          // Formato 1: giorno/mese/anno
+            "dddd, dd MMMM yyyy",  // Formato 2: giorno della settimana, giorno mese anno
+            "yyyy-MM-dd",          // Formato 3: anno-mese-giorno (ISO)
+            "dd MMMM yyyy"         // Formato 4: giorno mese anno (con nome del mese)
+    };
 };
 
 

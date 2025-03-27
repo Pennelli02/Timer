@@ -84,7 +84,7 @@ target_link_libraries(Timer Timer_lib)
 # Test executable
 add_executable(Timer_test
         tests/clockwindow_test.cpp
-        tests/clockwindow_test.h)
+        tests/clockwindow_test.h tests/timeritem_test.cpp tests/timeritem_test.h)
 
 set_target_properties(Timer_test PROPERTIES AUTOMOC ON)
 

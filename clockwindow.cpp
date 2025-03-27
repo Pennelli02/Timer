@@ -62,7 +62,7 @@ void ClockWIndow::showTime() {
 
 void ClockWIndow::changeDateFormat() {
     // Passa al formato successivo
-    currentDateIndex = (currentDateIndex + 1) % 4;
+    currentDateIndex = (currentDateIndex + 1) % formats.length();
     showDate();
 }
 
@@ -113,12 +113,7 @@ void ClockWIndow::showDate() {
     QString dateText;
 
     // Lista di formati di data
-    QStringList formats = {
-            "dd/MM/yyyy",          // Formato 1: giorno/mese/anno
-            "dddd, dd MMMM yyyy",  // Formato 2: giorno della settimana, giorno mese anno
-            "yyyy-MM-dd",          // Formato 3: anno-mese-giorno (ISO)
-            "dd MMMM yyyy"         // Formato 4: giorno mese anno (con nome del mese)
-    };
+
 
     // Seleziona il formato corrente
     dateText = date.toString(formats[currentDateIndex]);

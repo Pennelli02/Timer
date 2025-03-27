@@ -806,6 +806,8 @@ Timer_test_autogen/timestamp: \
   Timer_test_autogen/moc_predefs.h \
   ../tests/clockwindow_test.cpp \
   ../tests/clockwindow_test.h \
+  ../tests/timeritem_test.cpp \
+  ../tests/timeritem_test.h \
   ../timeritem.h \
   ../timerwindow.h \
   C:/Program\ Files/JetBrains/CLion\ 2021.3.2/bin/cmake/win/bin/cmake.exe
