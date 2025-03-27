@@ -12,7 +12,7 @@ TimerItem::TimerItem(QWidget *parent) :
         QWidget(parent),
         ui(new Ui::TimerItem),
         remainingSeconds(0),
-        isRunning(false) {
+        isRunning(false), isFinished(false){
 
     ui->setupUi(this);
     timer = new QTimer(this);
@@ -29,7 +29,7 @@ TimerItem::~TimerItem() {
 void TimerItem::setDuration(int hours, int minutes, int seconds) {
     remainingSeconds = (hours * 3600) + (minutes * 60) + seconds;
     initialSeconds = remainingSeconds;
-    updateDisplay();
+    updateDisplay(); // Passa true per inizializzazione
 }
 
 void TimerItem::startTimer() {
@@ -48,8 +48,6 @@ void TimerItem::pauseTimer() {
     }
 }
 
-
-
 void TimerItem::updateDisplay() {
     if (remainingSeconds > 0) {
         startTimer();
@@ -58,14 +56,18 @@ void TimerItem::updateDisplay() {
         int m = (remainingSeconds % 3600) / 60;
         int s = remainingSeconds % 60;
         ui->timerLabel->setText(QString("%1:%2:%3")
-                                       .arg(h, 2, 10, QChar('0'))
-                                       .arg(m, 2, 10, QChar('0'))
-                                       .arg(s, 2, 10, QChar('0')));
-        remainingSeconds--;
+                                        .arg(h, 2, 10, QChar('0'))
+                                        .arg(m, 2, 10, QChar('0'))
+                                        .arg(s, 2, 10, QChar('0')));
+
+            remainingSeconds--;
+
+
     } else {
         handleTimerFinished();
     }
 }
+
 void TimerItem::handleTimerFinished() {
     timer->stop();
     isRunning = false;
@@ -134,6 +136,7 @@ void TimerItem::repeatTimer() {
     startTimer();
     isFinished= false;
 }
+
 void TimerItem::playEndTimer() {
 
     player = new QMediaPlayer(this);
@@ -156,6 +159,22 @@ void TimerItem::setTitle(const QString &title) {
 
 void TimerItem::showTypeSound(const QString &labelText) {
     ui->soundLabel->setText(labelText);
+}
+
+const QString &TimerItem::getTitle() const {
+    return title;
+}
+
+const QString &TimerItem::getMusicType() const {
+    return musicType;
+}
+
+bool TimerItem::isRunning1() const {
+    return isRunning;
+}
+
+bool TimerItem::isFinished1() const {
+    return isFinished;
 }
 
 

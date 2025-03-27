@@ -96,6 +96,7 @@ void TimerWindow::addTimer() {
     timer->showTypeSound(ui->menuButton->text());
     timer->setTitle(genericTitle);
     timer->setDuration(hours, minutes, seconds);
+    timer->startTimer();
     QListWidgetItem *item = new QListWidgetItem(ui->timersList);
     item->setSizeHint(QSize(ui->timersList->width() - 10, 119));
 

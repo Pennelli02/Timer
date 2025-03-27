@@ -24,25 +24,33 @@ Q_OBJECT
 public:
     explicit TimerItem(QWidget *parent = nullptr);
     void setDuration(int hours, int minutes, int seconds);
+    // metodi resi pubblici per i testing
     void startTimer();
+    void pauseTimer();
+    void repeatTimer();
+    void removeTimer();
+
     void setMusicType(const QString &musicType);
     int getRemainingSeconds() const;
     ~TimerItem() override;
     void showTypeSound(const QString  &labelText);
     void setTitle(const QString &title);
+    const QString &getMusicType() const;
+    const QString &getTitle() const;
+    bool isFinished1() const;
+    bool isRunning1() const;
 signals:
     void timerDeleted(TimerItem *timer);
     void timerFinished(TimerItem *timer);
 
 private slots:
     void playEndTimer();
-    void repeatTimer();
-    void pauseTimer();
     void updateDisplay();
     void handleTimerFinished();
-    void removeTimer();
+
     void on_startPauseButton_clicked();
     void on_deleteTimer_clicked();
+
 
 
 private:
@@ -56,6 +64,8 @@ private:
     bool isRunning;
     bool isFinished;
     int initialSeconds;
+
+
 };
 
 
