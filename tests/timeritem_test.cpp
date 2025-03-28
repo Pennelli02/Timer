@@ -88,4 +88,14 @@ void timeritem_test::testDeleteSignal()
 
     QCOMPARE(deletedSpy.count(), 1); // Verifichiamo che il segnale sia stato emesso
 }
+
+void timeritem_test::testAudioSetup()
+{
+    QString soundPath = "/sounds/alarm.wav";
+    item->setMusicType(soundPath);
+    QCOMPARE(item->getMusicType(), soundPath);
+
+    // Nota: Testare effettivamente la riproduzione audio richiederebbe un mock non so se sia necessario
+    // Qui verifichiamo solo che il path sia stato impostato correttamente
+}
 QTEST_MAIN(timeritem_test)

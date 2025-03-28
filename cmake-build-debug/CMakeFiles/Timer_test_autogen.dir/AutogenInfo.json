@@ -366,6 +366,12 @@
 			"MU",
 			"KRHXW7JQHD/moc_timeritem_test.cpp",
 			null
+		],
+		[
+			"C:/Users/Asus/CLionProjects/Timer/tests/timerwindow_test.h",
+			"MU",
+			"KRHXW7JQHD/moc_timerwindow_test.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -467,6 +473,11 @@
 		],
 		[
 			"C:/Users/Asus/CLionProjects/Timer/tests/timeritem_test.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/Asus/CLionProjects/Timer/tests/timerwindow_test.cpp",
 			"MU",
 			null
 		]

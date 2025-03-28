@@ -21,6 +21,7 @@ private slots:
     void testTimerFinished();
     void testRepeatTimer();
     void testDeleteSignal();
+    void testAudioSetup();
 private:
     TimerItem* item;
 
