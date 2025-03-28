@@ -51,7 +51,8 @@ void TimerWindow::selectSound() {
     QAction *opzione4 = menu.addAction("Slot machine");
     QAction *opzione5 = menu.addAction("Siren");
     QAction *opzione6 = menu.addAction("Bonus");
-    QAction *opzione7=menu.addAction("estate");
+    QAction *opzione7=menu.addAction("Estate");
+    QAction *opzione8=menu.addAction("DragonBall");
 
     // Mostrare il menu accanto al pulsante quando viene premuto
     QAction *selezionato = menu.exec(ui->menuButton->mapToGlobal(QPoint(0, ui->menuButton->height())));
@@ -81,7 +82,10 @@ void TimerWindow::selectSound() {
     }else if (selezionato==opzione7){
         soundType=soundsPath+ "cinotti.mpeg";
         ui->menuButton->setText("Estate");
-    }
+    }else if (selezionato==opzione8){
+        soundType=soundsPath+ "dan_dan_kokoro.mp3";
+        ui->menuButton->setText("DragonBall");
+}
 }
 
 void TimerWindow::addTimer() {

@@ -78,3 +78,4 @@ void clockwindow_test::testTimerWindowCreation() {
     // Verifica che la finestra timer sia stata creata
     QVERIFY(cw->getTimerWindow() != nullptr);
 }
+//QTEST_MAIN(clockwindow_test)
