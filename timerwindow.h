@@ -21,12 +21,13 @@ Q_OBJECT
 
 public:
     explicit TimerWindow(QWidget *parent = nullptr);
-
+    QString getSoundType() const { return soundType; }
+    void selectSound();
+    void selectSoundOption(int index);
     ~TimerWindow() override;
 private slots:
     void addTimer();       // Aggiunge un nuovo timer
-    void removeTimer(TimerItem *timer);  // Rimuove un timer
-    void selectSound();
+    void removeTimer(TimerItem *timer);// Rimuove un timer
     void showTitleEditor();
 private:
     QString genericTitle;

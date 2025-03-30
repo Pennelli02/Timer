@@ -11,7 +11,6 @@ void timeritem_test::init() {
     item=new TimerItem();
 }
 
-
 void timeritem_test::testInitialization()
 {
     QVERIFY(item != nullptr);

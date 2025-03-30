@@ -7,6 +7,7 @@
 
 #include <QtTest>
 #include <QSignalSpy>
+#include <QPushButton>
 #include "../timerwindow.h"
 
 class timerwindow_test : public QObject
@@ -17,11 +18,9 @@ private slots:
     void init();
     void cleanup();
     void testInitialState();
-//    void testAddTimer();
-//    void testRemoveTimer();
-//    void testSelectSound();
-//    void testTitleEditor();
-//    void testTimerIntegration();
+    void testAddTimer();
+    void testRemoveTimer();
+    void testSelectSound();
 
 private:
     TimerWindow* window;

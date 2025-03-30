@@ -27,106 +27,94 @@ void timerwindow_test::testInitialState()
     QCOMPARE(window->findChild<QSpinBox*>("secondsSpinBox")->value(), 0);
 }
 
-//void timerwindow_test::testAddTimer()
-//{
-//    // Imposta valori di test
-//    window->findChild<QSpinBox*>("hourSpinBox")->setValue(0);
-//    window->findChild<QSpinBox*>("minSpinBox")->setValue(1);
-//    window->findChild<QSpinBox*>("secondsSpinBox")->setValue(30);
-//
-//    // Simula click sul pulsante di aggiunta timer
-//    QTest::mouseClick(window->findChild<QPushButton*>("startTimer"), Qt::LeftButton);
-//
-//    // Verifica che il timer sia stato aggiunto
-//    QCOMPARE(window->findChild<QListWidget*>("timersList")->count(), 1);
-//
-//    // Verifica che non venga aggiunto un timer con durata 0
-//    window->findChild<QSpinBox*>("hourSpinBox")->setValue(0);
-//    window->findChild<QSpinBox*>("minSpinBox")->setValue(0);
-//    window->findChild<QSpinBox*>("secondsSpinBox")->setValue(0);
-//    QTest::mouseClick(window->findChild<QPushButton*>("startTimer"), Qt::LeftButton);
-//    QCOMPARE(window->findChild<QListWidget*>("timersList")->count(), 1);
-//}
-//
-//void timerwindow_test::testRemoveTimer()
-//{
-//    // Aggiungi un timer
-//    window->findChild<QSpinBox*>("hourSpinBox")->setValue(0);
-//    window->findChild<QSpinBox*>("minSpinBox")->setValue(1);
-//    window->findChild<QSpinBox*>("secondsSpinBox")->setValue(0);
-//    QTest::mouseClick(window->findChild<QPushButton*>("startTimer"), Qt::LeftButton);
-//
-//    // Ottieni il timer aggiunto
-//    QListWidget* list = window->findChild<QListWidget*>("timersList");
-//    QListWidgetItem* item = list->item(0);
-//    TimerItem* timer = qobject_cast<TimerItem*>(list->itemWidget(item));
-//
-//    // Crea uno spy per il segnale di rimozione
-//    QSignalSpy spy(timer, &TimerItem::timerDeleted);
-//
-//    // Simula la rimozione
-//    timer->removeTimer();
-//
-//    // Verifica che il timer sia stato rimosso
-//    QCOMPARE(spy.count(), 1);
-//    QCOMPARE(list->count(), 0);
-//}
-//
-//void timerwindow_test::testSelectSound()
-//{
-//    // Simula click sul pulsante del menu
-//    QPushButton* soundButton = window->findChild<QPushButton*>("menuButton");
-//    QTest::mouseClick(soundButton, Qt::LeftButton);
-//
-//    // Verifica che il menu sia visibile (test indiretto)
-//    QMenu* menu = soundButton->findChild<QMenu*>();
-//    QVERIFY(menu != nullptr);
-//
-//    // Nota: Per testare la selezione effettiva, dovresti simulare la selezione di un'azione
-//    // Questo è più complesso e potrebbe richiedere l'uso di QTest::keyClick o simili
-//}
-//
-//void timerwindow_test::testTitleEditor()
-//{
-//    // Imposta un titolo di test
-//    QString testTitle = "Test Timer";
-//
-//    // Simula click sul pulsante del titolo
-//    QTest::mouseClick(window->findChild<QPushButton*>("titleButton"), Qt::LeftButton);
-//
-//    // Nota: Per testare completamente la dialog, dovresti:
-//    // 1. Creare un mock della dialog
-//    // 2. Simulare l'input dell'utente
-//    // 3. Verificare che il titolo sia stato aggiornato
-//
-//    // Questo è un test semplificato che verifica solo l'apertura della dialog
-//    QVERIFY(window->findChild<QDialog*>() != nullptr);
-//}
-//
-//void timerwindow_test::testTimerIntegration()
-//{
-//    // Test di integrazione tra TimerWindow e TimerItem
-//
-//    // Configura un mock player
-//    window->findChild<QPushButton*>("menuButton")->setText("Test Sound");
-//    window->setSoundType(":/sounds/test.wav");
-//
-//    // Aggiungi un timer breve
-//    window->findChild<QSpinBox*>("hourSpinBox")->setValue(0);
-//    window->findChild<QSpinBox*>("minSpinBox")->setValue(0);
-//    window->findChild<QSpinBox*>("secondsSpinBox")->setValue(1);
-//    QTest::mouseClick(window->findChild<QPushButton*>("startTimer"), Qt::LeftButton);
-//
-//    // Ottieni il timer
-//    QListWidget* list = window->findChild<QListWidget*>("timersList");
-//    TimerItem* timer = qobject_cast<TimerItem*>(list->itemWidget(list->item(0)));
-//    timer->setMediaPlayer(mockPlayer); // Inietta il mock
-//
-//    // Avvia il timer e attendi il completamento
-//    timer->startTimer();
-//    QTest::qWait(1500); // 1.5 secondi per sicurezza
-//
-//    // Verifica che il player sia stato attivato
-//    QVERIFY(mockPlayer->wasPlayCalled());
-//}
+void timerwindow_test::testAddTimer()
+{
+    // Trova i widget
+    QPushButton* startButton = window->findChild<QPushButton*>("startTimer");
+    QVERIFY(startButton != nullptr);  // Assicura che il pulsante esista
+
+    QSpinBox* hourBox = window->findChild<QSpinBox*>("hourSpinBox");
+    QSpinBox* minBox = window->findChild<QSpinBox*>("minSpinBox");
+    QSpinBox* secBox = window->findChild<QSpinBox*>("secondsSpinBox");
+    QVERIFY(hourBox && minBox && secBox);
+
+    // Imposta valori
+    hourBox->setValue(0);
+    minBox->setValue(1);
+    secBox->setValue(30);
+
+    // Simula click
+    QTest::mouseClick(startButton, Qt::LeftButton);
+
+    // Verifica che il timer sia stato aggiunto
+    QListWidget* list = window->findChild<QListWidget*>("timersList");
+    QVERIFY(list != nullptr);
+    QCOMPARE(list->count(), 1);
+
+    qDebug() << "testiamo anche che il caso in cui l'utente inserisca un timer di 00:00:00";
+    hourBox->setValue(0);
+    minBox->setValue(0);
+    secBox->setValue(0);
+
+    QTest::mouseClick(startButton, Qt::LeftButton);
+    QCOMPARE(list->count(), 1); // controlliamo che non sia stato inserito
+}
+
+void timerwindow_test::testRemoveTimer()
+{
+    QListWidget* list = window->findChild<QListWidget*>("timersList");
+    QVERIFY(list != nullptr);
+
+    // Trova i widget
+    QPushButton* startButton = window->findChild<QPushButton*>("startTimer");
+    QVERIFY(startButton != nullptr);  // Assicura che il pulsante esista
+
+    QSpinBox* hourBox = window->findChild<QSpinBox*>("hourSpinBox");
+    QSpinBox* minBox = window->findChild<QSpinBox*>("minSpinBox");
+    QSpinBox* secBox = window->findChild<QSpinBox*>("secondsSpinBox");
+    QVERIFY(hourBox && minBox && secBox);
+
+    // Imposta valori
+    hourBox->setValue(0);
+    minBox->setValue(1);
+    secBox->setValue(30);
+
+    // Simula click
+    QTest::mouseClick(startButton, Qt::LeftButton);
+
+    QCOMPARE(list->count(), 1);
+
+    QListWidgetItem* item = list->item(0);
+    TimerItem* timer = qobject_cast<TimerItem*>(list->itemWidget(item));
+    QVERIFY(timer != nullptr);
+
+    // Crea uno spy per verificare il segnale
+    QSignalSpy spy(timer, &TimerItem::timerDeleted);
+    QVERIFY(spy.isValid());  // Verifica che la connessione sia valida
+
+    timer->removeTimer();
+
+    // Aspetta fino a 1 secondo per vedere se il segnale viene emesso
+
+    QCOMPARE(spy.count(), 1);
+    QCOMPARE(list->count(), 0);
+}
+
+void timerwindow_test::testSelectSound()
+{
+    QPushButton* soundButton = window->findChild<QPushButton*>("menuButton");
+    QVERIFY(soundButton != nullptr);
+
+    // Memorizza il testo iniziale
+    QString initialText = soundButton->text();
+
+    // Testa direttamente la funzione senza aprire il menu
+    window->selectSoundOption(0); // 0 = Default alarm
+
+    // Verifiche
+    QCOMPARE(soundButton->text(), QString("Default alarm"));
+    QCOMPARE(window->getSoundType(), QString("sounds/alarm.wav"));
+    QVERIFY(soundButton->text() != initialText);
+}
+
 //QTEST_MAIN(timerwindow_test)

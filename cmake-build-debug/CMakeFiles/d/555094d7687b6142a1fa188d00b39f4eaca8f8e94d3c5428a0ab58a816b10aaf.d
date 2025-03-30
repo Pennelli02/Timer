@@ -762,8 +762,10 @@ Timer_test_autogen/timestamp: \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QListWidget \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QMenu \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QMessageBox \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/QPushButton \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QSizePolicy \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/QWidget \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractbutton.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractitemview.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractscrollarea.h \
@@ -777,6 +779,7 @@ Timer_test_autogen/timestamp: \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlistwidget.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qmenu.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qmessagebox.h \
+  C:/Qt/6.8.2/mingw_64/include/QtWidgets/qpushbutton.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qrubberband.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qsizepolicy.h \
   C:/Qt/6.8.2/mingw_64/include/QtWidgets/qslider.h \
@@ -1020,6 +1023,7 @@ Timer_test_autogen/timestamp: \
   Timer_test_autogen/moc_predefs.h \
   ../tests/clockwindow_test.cpp \
   ../tests/clockwindow_test.h \
+  ../tests/main.cpp \
   ../tests/timeritem_test.cpp \
   ../tests/timeritem_test.h \
   ../tests/timerwindow_test.cpp \

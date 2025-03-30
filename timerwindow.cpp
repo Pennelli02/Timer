@@ -19,6 +19,7 @@ TimerWindow::TimerWindow(QWidget *parent) :
     ui->timersList->setUniformItemSizes(false);
     ui->timersList->setSpacing(5);
     ui->timersList->setStyleSheet("QListWidget { background-color: #2a2a2a; }");
+
     connect(ui->startTimer, &QPushButton::clicked, this, &TimerWindow::addTimer);
     connect(ui->menuButton, &QPushButton::clicked, this, &TimerWindow::selectSound);
     connect(ui->titleButton, &QPushButton::clicked, this, &TimerWindow::showTitleEditor);
@@ -34,7 +35,7 @@ void TimerWindow::removeTimer(TimerItem *timer) {
         if (ui->timersList->itemWidget(item) == timer) {
             activeTimers.removeOne(timer);
             delete item;
-            delete timer;
+            timer->deleteLater(); // elimina nel prossimo ciclo di qt settato così per una questione di testing
             break;
         }
     }
@@ -42,51 +43,25 @@ void TimerWindow::removeTimer(TimerItem *timer) {
 
 void TimerWindow::selectSound() {
     // Creazione del menu a tendina
-    QMenu menu(this);
+    QMenu* menu=new QMenu(this);
 
     // Aggiunta delle opzioni al menu
-    QAction *opzione1 = menu.addAction("Default alarm");
-    QAction *opzione2 = menu.addAction("Rooster crowing");
-    QAction *opzione3 = menu.addAction("Retro game");
-    QAction *opzione4 = menu.addAction("Slot machine");
-    QAction *opzione5 = menu.addAction("Siren");
-    QAction *opzione6 = menu.addAction("Bonus");
-    QAction *opzione7=menu.addAction("Estate");
-    QAction *opzione8=menu.addAction("DragonBall");
+    QAction *opzione1 = menu->addAction("Default alarm");
+    QAction *opzione2 = menu->addAction("Rooster crowing");
+    QAction *opzione3 = menu->addAction("Retro game");
+    QAction *opzione4 = menu->addAction("Slot machine");
+    QAction *opzione5 = menu->addAction("Siren");
+
 
     // Mostrare il menu accanto al pulsante quando viene premuto
-    QAction *selezionato = menu.exec(ui->menuButton->mapToGlobal(QPoint(0, ui->menuButton->height())));
-
-    // Percorso base per i file audio
-    QString soundsPath = "sounds/";
+    QAction *selezionato = menu->exec(ui->menuButton->mapToGlobal(QPoint(0, ui->menuButton->height())));
 
     // Verifica quale opzione è stata selezionata
-    if (selezionato == opzione1) {
-        soundType = soundsPath + "alarm.wav";
-        ui->menuButton->setText("Default alarm");
-    } else if (selezionato == opzione2) {
-        soundType = soundsPath + "rooster-crowing.wav";
-        ui->menuButton->setText("Rooster crowing");
-    } else if (selezionato == opzione3) {
-        soundType = soundsPath + "retro-game.wav";
-        ui->menuButton->setText("Retro game");
-    } else if (selezionato == opzione4) {
-        soundType = soundsPath + "slot-machine.wav";
-        ui->menuButton->setText("Slot machine");
-    } else if(selezionato == opzione5) {
-        soundType = soundsPath + "siren.wav";
-        ui->menuButton->setText("Siren");
-    } else if(selezionato == opzione6) {
-        soundType = soundsPath + "la fine.mp3";
-        ui->menuButton->setText("Bonus");
-    }else if (selezionato==opzione7){
-        soundType=soundsPath+ "cinotti.mpeg";
-        ui->menuButton->setText("Estate");
-    }else if (selezionato==opzione8){
-        soundType=soundsPath+ "dan_dan_kokoro.mp3";
-        ui->menuButton->setText("DragonBall");
+    if (selezionato) {
+        selectSoundOption(menu->actions().indexOf(selezionato));
+    }
 }
-}
+
 
 void TimerWindow::addTimer() {
     int hours = ui->hourSpinBox->value();
@@ -120,6 +95,32 @@ void TimerWindow::showTitleEditor() {
     dialog.setTitle(genericTitle);
     if (dialog.exec() == QDialog::Accepted) {
         genericTitle = dialog.getTitle(); // Ottieni il titolo aggiornato
+    }
+}
+
+void TimerWindow::selectSoundOption(int index) {
+    QString soundsPath = "sounds/";
+    switch (index) {
+        case 0:
+            soundType = soundsPath + "alarm.wav";
+            ui->menuButton->setText("Default alarm");
+            break;
+        case 1:
+            soundType = soundsPath + "rooster-crowing.wav";
+            ui->menuButton->setText("Rooster crowing");
+            break;
+        case 2:
+            soundType = soundsPath + "retro-game.wav";
+            ui->menuButton->setText("Retro game");
+            break;
+        case 3:
+            soundType = soundsPath + "slot-machine.wav";
+            ui->menuButton->setText("Slot machine");
+            break;
+        case 4:
+            soundType = soundsPath + "siren.wav";
+            ui->menuButton->setText("Siren");
+            break;
     }
 }
 
