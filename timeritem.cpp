@@ -24,12 +24,16 @@ TimerItem::TimerItem(QWidget *parent) :
 
 TimerItem::~TimerItem() {
     delete ui;
+    delete player;
+    delete activeMessageBox;
+    delete timer;
+    delete deleteTimer;
 }
 
 void TimerItem::setDuration(int hours, int minutes, int seconds) {
     remainingSeconds = (hours * 3600) + (minutes * 60) + seconds;
     initialSeconds = remainingSeconds;
-    updateDisplay(); // Passa true per inizializzazione
+    updateDisplay();
 }
 
 void TimerItem::startTimer() {
@@ -37,6 +41,7 @@ void TimerItem::startTimer() {
         timer->start(1000);
         isRunning = true;
         ui->startPauseButton->setText("Pause");
+        mediaPlayerSetting();
     }
 }
 
@@ -89,15 +94,13 @@ void TimerItem::handleTimerFinished() {
     QObject::connect(&msgBox, &QMessageBox::finished, this, [=](int) {
         if (player) {
             player->stop();  // Ferma il suono
-            delete player;   // Libera memoria
-            player = nullptr;
         }
+        activeMessageBox= nullptr;
     });
 
     msgBox.exec();
-
     // Riproduce un suono di avviso non personalizzabile di sistema
-
+    activeMessageBox=&msgBox;
 
     emit timerFinished(this);
 
@@ -138,14 +141,6 @@ void TimerItem::repeatTimer() {
 }
 
 void TimerItem::playEndTimer() {
-
-    player = new QMediaPlayer(this);
-    QAudioOutput *audioOutput = new QAudioOutput(this);
-
-    player->setAudioOutput(audioOutput);
-    player->setSource(QUrl::fromLocalFile(musicType));
-
-    audioOutput->setVolume(1.0);
     player->play();
 }
 
@@ -177,4 +172,25 @@ bool TimerItem::isFinished1() const {
     return isFinished;
 }
 
+void TimerItem::setMediaPlayer(QMediaPlayer *player) {
+    this->player = player;
+}
+
+QMessageBox *TimerItem::getActiveMessageBox() const {
+    return activeMessageBox;
+}
+
+QMediaPlayer *TimerItem::getPlayer() const {
+    return player;
+}
+
+void TimerItem::mediaPlayerSetting(){
+    player = new QMediaPlayer(this);
+    QAudioOutput *audioOutput = new QAudioOutput(this);
+
+    player->setAudioOutput(audioOutput);
+    player->setSource(QUrl::fromLocalFile(musicType));
+
+    audioOutput->setVolume(1.0);
+}
 

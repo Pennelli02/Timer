@@ -11,10 +11,6 @@ void timeritem_test::init() {
     item=new TimerItem();
 }
 
-void timeritem_test::cleanUp() {
-    delete item;
-    item= nullptr;
-}
 
 void timeritem_test::testInitialization()
 {
@@ -98,4 +94,53 @@ void timeritem_test::testAudioSetup()
     // Nota: Testare effettivamente la riproduzione audio richiederebbe un mock non so se sia necessario
     // Qui verifichiamo solo che il path sia stato impostato correttamente
 }
-QTEST_MAIN(timeritem_test)
+
+void timeritem_test::testMediaPlayer() {
+    item->setDuration(0, 0, 1);
+    item->setMusicType("sounds/alarm.wav");
+
+    QMediaPlayer *player = item->getPlayer();
+    QVERIFY(player != nullptr);  // Assicura che il player sia valido
+
+    qDebug() << "Setting media source to:" << item->getMusicType();
+    player->setSource(QUrl::fromLocalFile(item->getMusicType()));
+
+    // Connetti segnali per debug
+    connect(player, &QMediaPlayer::mediaStatusChanged, [](QMediaPlayer::MediaStatus status) {
+        qDebug() << "Media status changed:" << status;
+    });
+
+    connect(player, &QMediaPlayer::playbackStateChanged, [](QMediaPlayer::PlaybackState state) {
+        qDebug() << "Playback state changed:" << state;
+    });
+
+    QSignalSpy mediaSpy(player, &QMediaPlayer::mediaStatusChanged);
+    QSignalSpy playbackSpy(player, &QMediaPlayer::playbackStateChanged);
+
+    // Avvia il player
+    player->play();
+    QTest::qWait(100);  // Tempo per aggiornare lo stato
+
+    // Verifica che i segnali siano stati emessi
+    QTRY_VERIFY(mediaSpy.count() > 0);
+    QTRY_VERIFY(playbackSpy.count() > 0);
+
+    QCOMPARE(player->playbackState(), QMediaPlayer::PlayingState);
+
+    // Simula chiusura della finestra di avviso
+    if (item->getActiveMessageBox()!= nullptr) {
+        item->getActiveMessageBox()->close();
+    }
+
+    QTest::qWait(1000);
+    QCOMPARE(player->playbackState(), QMediaPlayer::StoppedState);
+
+    delete player;
+}
+
+void timeritem_test::cleanUp() {
+    delete item;
+    item= nullptr;
+}
+
+//QTEST_MAIN(timeritem_test)

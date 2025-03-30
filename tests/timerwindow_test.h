@@ -5,9 +5,26 @@
 #ifndef TIMER_TIMERWINDOW_TEST_H
 #define TIMER_TIMERWINDOW_TEST_H
 
+#include <QtTest>
+#include <QSignalSpy>
+#include "../timerwindow.h"
 
-class timerwindow_test {
+class timerwindow_test : public QObject
+{
+Q_OBJECT
 
+private slots:
+    void init();
+    void cleanup();
+    void testInitialState();
+//    void testAddTimer();
+//    void testRemoveTimer();
+//    void testSelectSound();
+//    void testTitleEditor();
+//    void testTimerIntegration();
+
+private:
+    TimerWindow* window;
 };
 
 

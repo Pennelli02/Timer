@@ -29,7 +29,8 @@ public:
     void pauseTimer();
     void repeatTimer();
     void removeTimer();
-
+    QMessageBox* getActiveMessageBox() const;
+    void setMediaPlayer(QMediaPlayer* player);
     void setMusicType(const QString &musicType);
     int getRemainingSeconds() const;
     ~TimerItem() override;
@@ -39,6 +40,9 @@ public:
     const QString &getTitle() const;
     bool isFinished1() const;
     bool isRunning1() const;
+
+    QMediaPlayer *getPlayer() const;
+
 signals:
     void timerDeleted(TimerItem *timer);
     void timerFinished(TimerItem *timer);
@@ -47,7 +51,7 @@ private slots:
     void playEndTimer();
     void updateDisplay();
     void handleTimerFinished();
-
+    void mediaPlayerSetting();
     void on_startPauseButton_clicked();
     void on_deleteTimer_clicked();
 
@@ -64,6 +68,7 @@ private:
     bool isRunning;
     bool isFinished;
     int initialSeconds;
+    QMessageBox* activeMessageBox = nullptr;
 
 
 };

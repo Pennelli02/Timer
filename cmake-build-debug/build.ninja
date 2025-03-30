@@ -344,7 +344,7 @@ build Timer_test_autogen/timestamp Timer_test_autogen/mocs_compilation.cpp | ${c
 #############################################
 # Phony custom command for CMakeFiles\Timer_autogen_timestamp_deps
 
-build CMakeFiles/Timer_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/Timer_autogen_timestamp_deps: phony C$:/Qt/6.8.2/mingw_64/bin/Qt6Gui.dll C$:/Qt/6.8.2/mingw_64/bin/moc.exe C$:/Qt/6.8.2/mingw_64/bin/uic.exe C$:/Qt/6.8.2/mingw_64/bin/Qt6Core.dll C$:/Qt/6.8.2/mingw_64/bin/Qt6Multimedia.dll C$:/Qt/6.8.2/mingw_64/bin/Qt6Widgets.dll libTimer_lib.a || Timer_lib_autogen Timer_lib_autogen_timestamp_deps libTimer_lib.a
+build CMakeFiles/Timer_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/Timer_autogen_timestamp_deps: phony C$:/Qt/6.8.2/mingw_64/bin/moc.exe C$:/Qt/6.8.2/mingw_64/bin/uic.exe C$:/Qt/6.8.2/mingw_64/bin/Qt6Gui.dll C$:/Qt/6.8.2/mingw_64/bin/Qt6Core.dll libTimer_lib.a C$:/Qt/6.8.2/mingw_64/bin/Qt6Multimedia.dll C$:/Qt/6.8.2/mingw_64/bin/Qt6Widgets.dll || Timer_lib_autogen Timer_lib_autogen_timestamp_deps libTimer_lib.a
 
 
 #############################################
@@ -356,7 +356,7 @@ build CMakeFiles/Timer_autogen Timer_autogen/include/ui_ClockWIndow.h Timer_auto
 #############################################
 # Phony custom command for CMakeFiles\Timer_lib_autogen_timestamp_deps
 
-build CMakeFiles/Timer_lib_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/Timer_lib_autogen_timestamp_deps: phony C$:/Qt/6.8.2/mingw_64/bin/Qt6Gui.dll C$:/Qt/6.8.2/mingw_64/bin/moc.exe C$:/Qt/6.8.2/mingw_64/bin/uic.exe C$:/Qt/6.8.2/mingw_64/bin/Qt6Core.dll C$:/Qt/6.8.2/mingw_64/bin/Qt6Multimedia.dll C$:/Qt/6.8.2/mingw_64/bin/Qt6Widgets.dll
+build CMakeFiles/Timer_lib_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/Timer_lib_autogen_timestamp_deps: phony C$:/Qt/6.8.2/mingw_64/bin/moc.exe C$:/Qt/6.8.2/mingw_64/bin/uic.exe C$:/Qt/6.8.2/mingw_64/bin/Qt6Gui.dll C$:/Qt/6.8.2/mingw_64/bin/Qt6Core.dll C$:/Qt/6.8.2/mingw_64/bin/Qt6Multimedia.dll C$:/Qt/6.8.2/mingw_64/bin/Qt6Widgets.dll
 
 
 #############################################
@@ -368,7 +368,7 @@ build CMakeFiles/Timer_lib_autogen Timer_lib_autogen/include/ui_ClockWIndow.h Ti
 #############################################
 # Phony custom command for CMakeFiles\Timer_test_autogen_timestamp_deps
 
-build CMakeFiles/Timer_test_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/Timer_test_autogen_timestamp_deps: phony C$:/Qt/6.8.2/mingw_64/bin/Qt6Gui.dll C$:/Qt/6.8.2/mingw_64/bin/moc.exe C$:/Qt/6.8.2/mingw_64/bin/uic.exe C$:/Qt/6.8.2/mingw_64/bin/Qt6Core.dll C$:/Qt/6.8.2/mingw_64/bin/Qt6Test.dll C$:/Qt/6.8.2/mingw_64/bin/Qt6Multimedia.dll C$:/Qt/6.8.2/mingw_64/bin/Qt6Widgets.dll libTimer_lib.a || Timer_lib_autogen Timer_lib_autogen_timestamp_deps libTimer_lib.a
+build CMakeFiles/Timer_test_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/Timer_test_autogen_timestamp_deps: phony C$:/Qt/6.8.2/mingw_64/bin/moc.exe C$:/Qt/6.8.2/mingw_64/bin/uic.exe C$:/Qt/6.8.2/mingw_64/bin/Qt6Gui.dll C$:/Qt/6.8.2/mingw_64/bin/Qt6Core.dll libTimer_lib.a C$:/Qt/6.8.2/mingw_64/bin/Qt6Test.dll C$:/Qt/6.8.2/mingw_64/bin/Qt6Multimedia.dll C$:/Qt/6.8.2/mingw_64/bin/Qt6Widgets.dll || Timer_lib_autogen Timer_lib_autogen_timestamp_deps libTimer_lib.a
 
 
 #############################################

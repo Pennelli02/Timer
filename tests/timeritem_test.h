@@ -8,6 +8,7 @@
 #include <QTest>
 #include "../timeritem.h"
 
+
 class timeritem_test: public QObject
 {
     Q_OBJECT
@@ -22,6 +23,7 @@ private slots:
     void testRepeatTimer();
     void testDeleteSignal();
     void testAudioSetup();
+    void testMediaPlayer();
 private:
     TimerItem* item;
 
