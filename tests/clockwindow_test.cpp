@@ -10,7 +10,7 @@ void clockwindow_test::init() {
     cw = new ClockWIndow();
 }
 
-void clockwindow_test::cleanUp() {
+void clockwindow_test::cleanup() {
     // Pulizia dopo ogni test
     delete cw;
     cw = nullptr;

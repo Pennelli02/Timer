@@ -16,7 +16,7 @@ class clockwindow_test: public QObject
 
         private slots:
             void init();
-            void cleanUp();
+            void cleanup();
             void testInitialState();
             void testChangeDateFormat();
             void testChangeClockFormat();
