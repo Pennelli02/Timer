@@ -45,7 +45,7 @@ public:
 
 signals:
     void timerDeleted(TimerItem *timer);
-    void timerFinished(TimerItem *timer);
+    void timerFinished(); // testing purpose
 
 private slots:
     void playEndTimer();

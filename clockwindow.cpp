@@ -112,7 +112,6 @@ void ClockWIndow::showDate() {
     QDateTime date = QDateTime::currentDateTime();
     QString dateText;
 
-    // Lista di formati di data
 
 
     // Seleziona il formato corrente

@@ -103,7 +103,7 @@ void TimerItem::handleTimerFinished() {
     // Riproduce un suono di avviso non personalizzabile di sistema
     activeMessageBox=msgBox;
 
-    emit timerFinished(this);
+    emit timerFinished();
 
     // Dopo 5 secondi il timer verrà rimosso
     deleteTimer->start(5000);

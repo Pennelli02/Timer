@@ -47,7 +47,7 @@ void timeritem_test::testTimerFinished()
 {
     item->setDuration(0, 0, 1);
     item->setTitle("Test Timer");
-    item->setMusicType(":/sounds/alarm.wav");
+    item->setMusicType("/sounds/alarm.wav");
 
     // Creiamo uno spy per il segnale timerFinished
     QSignalSpy finishedSpy(item, &TimerItem::timerFinished);
