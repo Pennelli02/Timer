@@ -2,7 +2,7 @@
 // Created by Asus on 26/03/2025.
 //
 
-#include <QSignalSpy>
+
 #include "timeritem_test.h"
 
 
@@ -57,9 +57,21 @@ void timeritem_test::testTimerFinished()
     // Simuliamo il passare del tempo
     QTest::qWait(1500); // Attendiamo 1.5 secondi
 
+    //simuliamo il click dell'utente sulla finestra aperta
+    QTest::qWait(100);
+    QMessageBox* msgBox = item->getActiveMessageBox();
+    QVERIFY(msgBox != nullptr);  // Assicurati che sia stata creata
+    // Simula chiusura della finestra di avviso
+    if (item->getActiveMessageBox()!= nullptr) {
+        item->getActiveMessageBox()->close();
+    }  // Chiudila (equivale a cliccare su "Ok")
+
     QVERIFY(item->isFinished1());
     QVERIFY(!item->isRunning1());
     QCOMPARE(finishedSpy.count(), 1); // Verifichiamo che il segnale sia stato emesso
+
+    // Verifica che il messaggio sia stato correttamente rimosso dopo la chiusura
+    QVERIFY(item->getActiveMessageBox() == nullptr);
 }
 
 void timeritem_test::testRepeatTimer() {
@@ -69,6 +81,9 @@ void timeritem_test::testRepeatTimer() {
     // Simuliamo completamento
     QTest::qWait(5000); // Attendiamo 5 secondi
 
+    QTRY_VERIFY(item->getActiveMessageBox() != nullptr);
+    QMessageBox* msgBox = item->getActiveMessageBox();
+    msgBox->accept(); // Chiudila (equivale a cliccare su "Ok")  // Chiudila (equivale a cliccare su "Ok")
     // Ripetiamo il timer
     item->repeatTimer();
     QCOMPARE(item->getRemainingSeconds(), 5);
@@ -128,14 +143,12 @@ void timeritem_test::testMediaPlayer() {
     QTRY_VERIFY(playbackSpy.count() > 0);
 
     QCOMPARE(player->playbackState(), QMediaPlayer::PlayingState);
-
-    // Simula chiusura della finestra di avviso
-    if (item->getActiveMessageBox()!= nullptr) {
-        item->getActiveMessageBox()->close();
-    }
-
+    QMessageBox* msgBox = item->getActiveMessageBox();
+    msgBox->accept();
     QTest::qWait(1000);
+
     QCOMPARE(player->playbackState(), QMediaPlayer::StoppedState);
+
 
 }
 

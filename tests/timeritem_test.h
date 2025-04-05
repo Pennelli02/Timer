@@ -6,6 +6,7 @@
 #define TIMER_TIMERITEM_TEST_H
 
 #include <QTest>
+#include <QSignalSpy>
 #include "../timeritem.h"
 
 

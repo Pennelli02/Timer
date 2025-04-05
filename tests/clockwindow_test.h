@@ -6,6 +6,7 @@
 #define TIMER_CLOCKWINDOW_TEST_H
 
 #include <QTest>
+#include <QSignalSpy>
 #include "../clockwindow.h"
 
 

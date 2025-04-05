@@ -8,6 +8,7 @@
 #include <QtTest>
 #include <QSignalSpy>
 #include <QPushButton>
+#include <QSpinBox>
 #include "../timerwindow.h"
 
 class timerwindow_test : public QObject

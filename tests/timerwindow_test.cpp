@@ -3,7 +3,7 @@
 //
 
 
-#include <QSpinBox>
+
 #include "timerwindow_test.h"
 void timerwindow_test::init()
 {

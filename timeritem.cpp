@@ -95,18 +95,18 @@ void TimerItem::handleTimerFinished() {
         if (player) {
             player->stop();  // Stop the sound
         }
-        activeMessageBox = nullptr;  // Ensure it's cleared out
+        // Dopo 5 secondi il timer verrà rimosso
+        deleteTimer->start(5000);
+        activeMessageBox = nullptr;  // ci si assicura che non ci siano memory leak
     });
 
 
-    msgBox->exec();
+    msgBox->open();
+
     // Riproduce un suono di avviso non personalizzabile di sistema
     activeMessageBox=msgBox;
 
     emit timerFinished();
-
-    // Dopo 5 secondi il timer verrà rimosso
-    deleteTimer->start(5000);
 
 }
 

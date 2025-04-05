@@ -2,7 +2,7 @@
 // Created by Asus on 23/03/2025.
 //
 
-#include <QSignalSpy>
+
 #include "clockwindow_test.h"
 
 void clockwindow_test::init() {
