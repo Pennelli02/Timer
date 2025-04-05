@@ -84,28 +84,30 @@ void TimerItem::handleTimerFinished() {
     ui->timerLabel->setStyleSheet("color: red; font-weight: bold;");
     playEndTimer();
     // Mostra un pop-up di avviso
-    QMessageBox msgBox;
-    msgBox.setWindowTitle(title);
-    msgBox.setText("Il timer è terminato!");
-    msgBox.setStyleSheet("font-size:20px; font-weight: bold;");
-    msgBox.setIcon(QMessageBox::Information);
-    msgBox.setStandardButtons(QMessageBox::Ok);
+    QMessageBox *msgBox =new QMessageBox;
+    msgBox->setWindowTitle(title);
+    msgBox->setText("Il timer è terminato!");
+    msgBox->setStyleSheet("font-size:20px; font-weight: bold;");
+    msgBox->setIcon(QMessageBox::Information);
+    msgBox->setStandardButtons(QMessageBox::Ok);
     // Blocca il suono quando il messaggio viene chiuso
-    QObject::connect(&msgBox, &QMessageBox::finished, this, [=](int) {
+    QObject::connect(msgBox, &QMessageBox::finished, this, [=](int) {
         if (player) {
-            player->stop();  // Ferma il suono
+            player->stop();  // Stop the sound
         }
-        activeMessageBox= nullptr;
+        activeMessageBox = nullptr;  // Ensure it's cleared out
     });
 
-    msgBox.exec();
+
+    msgBox->exec();
     // Riproduce un suono di avviso non personalizzabile di sistema
-    activeMessageBox=&msgBox;
+    activeMessageBox=msgBox;
 
     emit timerFinished(this);
 
     // Dopo 5 secondi il timer verrà rimosso
     deleteTimer->start(5000);
+
 }
 
 void TimerItem::removeTimer() {

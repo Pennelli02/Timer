@@ -11,6 +11,8 @@ void timeritem_test::init() {
     item=new TimerItem();
 }
 
+
+
 void timeritem_test::testInitialization()
 {
     QVERIFY(item != nullptr);
@@ -61,17 +63,18 @@ void timeritem_test::testTimerFinished()
 }
 
 void timeritem_test::testRepeatTimer() {
-    item->setDuration(0, 0, 10);
+    item->setDuration(0, 0, 5);
     item->startTimer();
 
     // Simuliamo completamento
-    QTest::qWait(10000); // Attendiamo 10 secondi
+    QTest::qWait(5000); // Attendiamo 5 secondi
 
     // Ripetiamo il timer
     item->repeatTimer();
-    QCOMPARE(item->getRemainingSeconds(), 10);
+    QCOMPARE(item->getRemainingSeconds(), 5);
     QVERIFY(item->isRunning1());
     QVERIFY(!item->isFinished1());
+    QVERIFY(item->getRemainingSeconds() <= 5); // non deve superare il tempo iniziale
 }
 
 void timeritem_test::testDeleteSignal()
@@ -134,12 +137,14 @@ void timeritem_test::testMediaPlayer() {
     QTest::qWait(1000);
     QCOMPARE(player->playbackState(), QMediaPlayer::StoppedState);
 
-    delete player;
 }
 
-void timeritem_test::cleanUp() {
-    delete item;
-    item= nullptr;
-}
+/*void timeritem_test::cleanup() {
+    if (item) {
+        item->disconnect(); // prevenire segnali indesiderati
+        delete item;
+        item = nullptr;
+    }
+}*/
 
 //QTEST_MAIN(timeritem_test)

@@ -13,7 +13,7 @@ int main(int argc, char** argv) {
     int result = 0;
 
     result |= QTest::qExec(new timerwindow_test, argc, argv);
-    result |= QTest::qExec(new timerwindow_test, argc, argv);
+    result |= QTest::qExec(new timeritem_test, argc, argv);
     result |= QTest::qExec(new clockwindow_test, argc, argv);
 
     return (result == 0) ? 0 : 1;

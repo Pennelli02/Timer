@@ -35,7 +35,7 @@ void TimerWindow::removeTimer(TimerItem *timer) {
         if (ui->timersList->itemWidget(item) == timer) {
             activeTimers.removeOne(timer);
             delete item;
-            timer->deleteLater(); // elimina nel prossimo ciclo di qt settato così per una questione di testing
+            timer->deleteLater();
             break;
         }
     }
@@ -43,7 +43,7 @@ void TimerWindow::removeTimer(TimerItem *timer) {
 
 void TimerWindow::selectSound() {
     // Creazione del menu a tendina
-    QMenu* menu=new QMenu(this);
+    QMenu* menu=new QMenu(ui->menuButton);
 
     // Aggiunta delle opzioni al menu
     QAction *opzione1 = menu->addAction("Default alarm");

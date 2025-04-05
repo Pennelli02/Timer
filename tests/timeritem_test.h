@@ -14,8 +14,8 @@ class timeritem_test: public QObject
     Q_OBJECT
 
 private slots:
-    void init();
-    void cleanUp();
+   void init();
+  // void cleanup();
     void testInitialization();
     void testSetDuration();
     void testStartPause();
@@ -26,9 +26,6 @@ private slots:
     void testMediaPlayer();
 private:
     TimerItem* item;
-
-
-
 };
 
 
