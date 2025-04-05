@@ -136,16 +136,19 @@ void timeritem_test::testMediaPlayer() {
 
     // Avvia il player
     player->play();
-    QTest::qWait(100);  // Tempo per aggiornare lo stato
+    QTest::qWait(101);  // Tempo per aggiornare lo stato
 
     // Verifica che i segnali siano stati emessi
     QTRY_VERIFY(mediaSpy.count() > 0);
     QTRY_VERIFY(playbackSpy.count() > 0);
 
     QCOMPARE(player->playbackState(), QMediaPlayer::PlayingState);
+
+    QTest::qWait(1100);  // Attendi poco più di 1 secondo (la durata del timer)
     QMessageBox* msgBox = item->getActiveMessageBox();
+    QVERIFY(msgBox != nullptr);
     msgBox->accept();
-    QTest::qWait(1000);
+
 
     QCOMPARE(player->playbackState(), QMediaPlayer::StoppedState);
 

@@ -16,7 +16,7 @@ class timeritem_test: public QObject
 
 private slots:
    void init();
-  // void cleanup();
+   //void cleanup();
     void testInitialization();
     void testSetDuration();
     void testStartPause();
