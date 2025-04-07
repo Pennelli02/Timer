@@ -63,7 +63,7 @@ void timeritem_test::testTimerFinished()
     QVERIFY(msgBox != nullptr);  // Assicurati che sia stata creata
     // Simula chiusura della finestra di avviso
     if (item->getActiveMessageBox()!= nullptr) {
-        item->getActiveMessageBox()->close();
+        item->getActiveMessageBox()->accept();
     }  // Chiudila (equivale a cliccare su "Ok")
 
     QVERIFY(item->isFinished1());
@@ -83,7 +83,7 @@ void timeritem_test::testRepeatTimer() {
 
     QTRY_VERIFY(item->getActiveMessageBox() != nullptr);
     QMessageBox* msgBox = item->getActiveMessageBox();
-    msgBox->accept(); // Chiudila (equivale a cliccare su "Ok")  // Chiudila (equivale a cliccare su "Ok")
+    msgBox->accept(); // Chiudila (equivale a cliccare su "Ok")
     // Ripetiamo il timer
     item->repeatTimer();
     QCOMPARE(item->getRemainingSeconds(), 5);

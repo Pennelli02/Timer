@@ -22,10 +22,12 @@ class clockwindow_test: public QObject
             void testChangeDateFormat();
             void testChangeClockFormat();
             void testCycleThroughAllDateFormats();
+            void testCycleThroughAllClockFormats();
             void testTimerWindowCreation();
 
 private:
             ClockWIndow * cw;
+
 
 };
 

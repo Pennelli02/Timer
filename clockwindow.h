@@ -30,6 +30,10 @@ public:
     QString getClockLabelText() const;
     QString getDateLabelText() const;
 
+    const QStringList &getFormatsDate() const;
+
+    const QStringList &getFormatsCLock() const;
+
     ~ClockWIndow() override;
 private slots:
     void showTime();
@@ -42,11 +46,17 @@ private:
     int currentDateIndex;
     int currentClockIndex;
     TimerWindow *timerWindow;
-    QStringList formats = {
+    QStringList formatsDate = {
             "dd/MM/yyyy",          // Formato 1: giorno/mese/anno
             "dddd, dd MMMM yyyy",  // Formato 2: giorno della settimana, giorno mese anno
             "yyyy-MM-dd",          // Formato 3: anno-mese-giorno (ISO)
             "dd MMMM yyyy"         // Formato 4: giorno mese anno (con nome del mese)
+    };
+    QStringList formatsCLock={
+            "hh : mm : ss", // Formato 1: ora : minuti : secondi
+            "hh-mm-ss",     // Formato 2: ora-minuti-secondi
+            "hh:mm ap",     // Formato 3: ora:minuti am/pm (inglese)
+            "HH:mm"         // Formato 4: ora:minuti (italiano)
     };
 };
 

@@ -29,45 +29,67 @@ void clockwindow_test::testInitialState() {
 
 void clockwindow_test::testChangeDateFormat() {
 // Salva il formato corrente
-    QString initialDate = cw->getDateLabelText();
+
+    QString initialFormat= cw->getFormatsDate()[cw->getCurrentDateIndex()];
+    QCOMPARE(initialFormat, cw->getFormatsDate()[0]); // controlliamo che abbia effettivamente preso il primo formato
 
     // Cambia il formato
     cw->testAccess_changeDateFormat();
 
     // Verifica che il formato sia cambiato
-    QString newDate = cw->getDateLabelText();
-    QVERIFY(initialDate != newDate);
+    QString newFormat=cw->getFormatsDate()[cw->getCurrentDateIndex()];
+
+    // verifichiamo che il formato della data sia cambiato
+    QVERIFY(initialFormat!=newFormat);
 
     // Verifica che l'indice sia incrementato
     QCOMPARE(cw->getCurrentDateIndex(), 1);
+    QCOMPARE(newFormat, cw->getFormatsDate()[1]); // controlliamo che abbia preso il formato successivo
 }
 
 void clockwindow_test::testChangeClockFormat() {
     // Salva il formato corrente
-    QString initialTime = cw->getClockLabelText();
-
+    QString initFormat= cw->getFormatsCLock()[cw->getCurrentClockIndex()];
+    QCOMPARE(initFormat, cw->getFormatsCLock()[0]); // controlliamo che abbia effettivamente preso il primo formato
     // Cambia il formato
     cw->testAccess_changeClockFormat();
 
-    QString newTime= cw->getClockLabelText();
-    QVERIFY(initialTime != newTime);
+    QString newFormat=cw->getFormatsCLock()[cw->getCurrentClockIndex()];
+
+    // verifichiamo che il formato della data sia cambiato
+    QVERIFY(initFormat!=newFormat);
+
     // Verifica che l'indice sia incrementato
     QCOMPARE(cw->getCurrentClockIndex(), 1);
+    QCOMPARE(newFormat, cw->getFormatsCLock()[1]); // controlliamo che abbia preso il formato successivo
+
 }
 
 void clockwindow_test::testCycleThroughAllDateFormats() {
-// Verifica che dopo 4 cambiamenti si torni al formato iniziale
-    QString initialDate = cw->getDateLabelText();
+// Verifica che dopo 4 cambiamenti si torni al formato iniziale date
+    QString initialDate = cw->getFormatsDate()[cw->getCurrentDateIndex()];
 
-    for (int i = 0; i < 4; i++) {
+    for (int i = 0; i < cw->getFormatsDate().length(); i++) {
         cw->testAccess_changeDateFormat();
     }
-    QString newDate= cw->getDateLabelText();
+    QString newDate= cw->getFormatsDate()[cw->getCurrentDateIndex()];
 
     // Dopo 4 cambiamenti, dovremmo essere tornati all'indice 0
     QCOMPARE(cw->getCurrentDateIndex(), 0);
+    QCOMPARE(initialDate, newDate);
 }
+void clockwindow_test::testCycleThroughAllClockFormats(){
+    // Verifica che dopo 4 cambiamenti si torni al formato iniziale clock
+    QString initClockFormat= cw->getFormatsCLock()[cw->getCurrentClockIndex()];
 
+    for (int i = 0; i < cw->getFormatsCLock().length(); ++i) {
+        cw->testAccess_changeClockFormat();
+    }
+    QString newCLockFormat= cw->getFormatsCLock()[cw->getCurrentClockIndex()];
+
+    QCOMPARE(cw->getCurrentClockIndex(), 0);
+    QCOMPARE(initClockFormat, newCLockFormat);
+}
 void clockwindow_test::testTimerWindowCreation() {
     // Verifica che la finestra timer sia nullptr all'inizio
     QVERIFY(cw->getTimerWindow() == nullptr);

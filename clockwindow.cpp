@@ -29,45 +29,41 @@ ClockWIndow::~ClockWIndow() {
 
 void ClockWIndow::showTime() {
     QTime time = QTime::currentTime();
-    QString timeText;
+    QString timeText = time.toString(formatsCLock[currentClockIndex]);
+
     switch (currentClockIndex) {
         case 0:
-            timeText = time.toString("hh : mm : ss");
             if((time.second()%2)==0){
                 timeText[3]=' ';
                 timeText[8]=' ';
             }
             break;
         case 1:
-            timeText=time.toString("hh-mm-ss");
             if((time.second()%2)==0){
                 timeText[2]=' ';
                 timeText[5]=' ';
             }
             break;
         case 2:
-            timeText=time.toString("hh:mm ap");
             if((time.second()%2)==0)
                 timeText[2]=' ';
             break;
         case 3:
-            timeText=time.toString("HH:mm");
             if((time.second()%2)==0)
                 timeText[2]=' ';
             break;
     }
-
     ui->ClockLabel->setText(timeText);
 }
 
 void ClockWIndow::changeDateFormat() {
     // Passa al formato successivo
-    currentDateIndex = (currentDateIndex + 1) % formats.length();
+    currentDateIndex = (currentDateIndex + 1) % formatsDate.length();
     showDate();
 }
 
 void ClockWIndow::changeClockFormat() {
- currentClockIndex=(currentClockIndex+1)%4; // 4 formati
+ currentClockIndex=(currentClockIndex+1)% formatsCLock.length(); // 4 formati
  showTime();
 }
 
@@ -112,12 +108,18 @@ void ClockWIndow::showDate() {
     QDateTime date = QDateTime::currentDateTime();
     QString dateText;
 
-
-
     // Seleziona il formato corrente
-    dateText = date.toString(formats[currentDateIndex]);
+    dateText = date.toString(formatsDate[currentDateIndex]);
 
     // Aggiorna l'etichetta con la data formattata
     ui->DateLabel->setText(dateText);
+}
+// per il testing
+const QStringList &ClockWIndow::getFormatsDate() const {
+    return formatsDate;
+}
+
+const QStringList &ClockWIndow::getFormatsCLock() const {
+    return formatsCLock;
 }
 
